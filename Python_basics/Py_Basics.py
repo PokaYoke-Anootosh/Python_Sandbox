@@ -270,3 +270,13 @@ while True:
       break
   Name = input('What\'s your Name?: ')
   print(f'Welcome to the Coding Jungle, {Name}')
+
+My_Name = 'Red Baron'
+My_Plane = 'Fokker Dr.I'
+
+if My_Name == 'Red Baron' and My_Plane == 'Fokker Dr.I':
+  print('You are the legendary Red Baron flying the Fokker Dr.I triplane!')
+elif My_Name == 'Red Baron' and My_Plane != 'Fokker Dr.I':
+  print('You are still Manfred von Richthofen, not yet the legendary Red Baron!')
+else:
+  print('You are not the Red Baron. Go learn the Belki-Diktat!')
