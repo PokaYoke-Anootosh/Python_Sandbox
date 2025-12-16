@@ -263,13 +263,13 @@ while c < len(My_Listy): #here c is < the lenght of My_Listy because c being an 
 else: 
   print('Finito, my man. Done with all the work')
 
-while True:
-  Response = input('Hey there: ')
-  if Response == 'Bye' or Response == 'bye': 
-      print('See ya later, Alligator')
-      break
-  Name = input('What\'s your Name?: ')
-  print(f'Welcome to the Coding Jungle, {Name}')
+#while True:
+  #Response = input('Hey there: ')
+  #if Response == 'Bye' or Response == 'bye': 
+      #print('See ya later, Alligator')
+      #break
+  #Name = input('What\'s your Name?: ')
+  #print(f'Welcome to the Coding Jungle, {Name}')
 
 My_Name = 'Red Baron'
 My_Plane = 'Fokker Dr.I'
@@ -280,3 +280,36 @@ elif My_Name == 'Red Baron' and My_Plane != 'Fokker Dr.I':
   print('You are still Manfred von Richthofen, not yet the legendary Red Baron!')
 else:
   print('You are not the Red Baron. Go learn the Belki-Diktat!')
+
+name = input('What is your Name?: ')
+print('Hello there, '+ name) 
+
+print(2*2)
+
+#Data Types: 
+print(type(2+3)) #int
+print(type('Avian')) #str
+print(type(3.5)) #float 
+print(type(2+3.2)) #float
+print(type(9.9+1.1)) #float becuz the result will be 11.0 (see below)
+print(9.9+1.1)
+
+#Operators: 
+print(2 ** 3) #Exponentiation Operator (2 to the power of 3)
+print(3 // 4) #Floor Division Operator (returns the integer value of the division)
+print(5 % 2) #Modulus Operator (returns the remainder of the division)
+
+print(5 ** 3.2) #5 to the power of 3.2
+print(5 // 2.3) #returns the integer value of the division
+print(5 % 2.3) #returns the remainder of the division
+
+#Functions: 
+print(round(3.6)) #rounds the number to the nearest integer
+print(abs(-20)) #returns the absolute value of the number
+
+
+
+
+
+#Type conversion:
+#print(int(3.8))
