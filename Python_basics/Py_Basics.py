@@ -292,7 +292,12 @@ print(type('Avian')) #str
 print(type(3.5)) #float 
 print(type(2+3.2)) #float
 print(type(9.9+1.1)) #float becuz the result will be 11.0 (see below)
+Complex_Num = 3 + 5j
+print(type(Complex_Num)) #complex number
 print(9.9+1.1)
+
+#Binanry Representation:
+print(bin(6)) #binary representation of 5
 
 #Operators: 
 print(2 ** 3) #Exponentiation Operator (2 to the power of 3)
@@ -307,6 +312,42 @@ print(5 % 2.3) #returns the remainder of the division
 print(round(3.6)) #rounds the number to the nearest integer
 print(abs(-20)) #returns the absolute value of the number
 
+#Operator Precedence
+print(3 + 4 * 2) #multiplication has higher precedence than addition
+
+#Variables: 
+
+#Normal Variables (should always start with a letter or underscore, cannot start with a number, no spaces allowed, case-sensitive)
+my_Var = 'Hello World'
+#OR 
+_myVar = 20
+#OR
+myVar2 = 30
+print(my_Var)
+print(_myVar)
+print(myVar2)
+
+#Dunder Variables (start and end with double underscores, used for special purposes)
+__myDunderVar__ = 'I am a Dunder Variable'
+print(__myDunderVar__)
+#Note: Avoid using Dunder Variables unless necessary 
+
+#Constants (should be written in uppercase letters, used for values that should not change)
+PI = 3.14159
+GRAVITY = 9.81
+SPEED_OF_LIGHT = 299792458
+print(PI)
+print(GRAVITY)
+print(SPEED_OF_LIGHT)
+#Avoid changing the value of constants 
+
+#Expressions and Statements:
+#Expression: A combination of values, variables, and operators that produces a value
+result = 3 + 4 * 2 #this is an expression
+print(result)
+#Statement: A complete line of code that performs an action
+if result > 10: #this is a statement
+  print('Result is greater than 10') #this is also a statement
 
 
 
