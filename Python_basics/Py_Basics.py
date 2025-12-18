@@ -349,8 +349,42 @@ print(result)
 if result > 10: #this is a statement
   print('Result is greater than 10') #this is also a statement
 
+#Augmented Assignment Operators: 
+x = 5
+x += 3 #equivalent to x = x + 3
+print(x)
+x -= 2 #equivalent to x = x - 2
+print(x)
+x *= 4 #equivalent to x = x * 4
+print(x)
+x /= 2 #equivalent to x = x / 2
+print(x)
+x //= 3 #equivalent to x = x // 3
+print(x)
 
+#Type String: 
+Username = 'SuperCoder'
+Password = 'SuperSecret123'
+print(Username)
+print(Password)
 
+#long Strings:
+Long_String= '''
+WOW
+0 0
+\_/
+'''
+print(Long_String)
+
+greeting = 'Hello'
+name = 'Avian'
+full_greeting = greeting + ' ' + name
+print(full_greeting)
+
+#String Concatenation:
+print('Hello' + ' ' + 'World')
+print('Python' + ' ' + ' Rocks!')
+print('I am ' + 5) #this will give an error because we are trying to concatenate a string with an integer
 
 #Type conversion:
 #print(int(3.8))
