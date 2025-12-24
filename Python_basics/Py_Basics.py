@@ -384,7 +384,30 @@ print(full_greeting)
 #String Concatenation:
 print('Hello' + ' ' + 'World')
 print('Python' + ' ' + ' Rocks!')
-print('I am ' + 5) #this will give an error because we are trying to concatenate a string with an integer
+#print('I am ' + 5) #this will give an error because we are trying to concatenate a string with an integer
 
 #Type conversion:
-#print(int(3.8))
+print(type(int(3.8)))
+print(type(str(100)))
+print(type(float('12.34')))
+print(int(str(100)) + 100)
+print(str(50 + 50) + ' is a hundred')
+print(float(5) + 2.5)
+
+#Escape Sequences:
+Weather = "It's a sunny day"
+#OR
+Weather_New = 'It\'s a rainy day' #escaping the single quote " ' "
+print(Weather)
+print(Weather_New)
+
+print('Hey It\'s your Birthday! Wish you a Very \'Happy Birthday\' Tosh!!') #escaping single quotes inside single quotes
+#AND (with a new line using \n)
+print('Hey It\'s your Birthday!\n Wish you a Very \'Happy Birthday\' Tosh!!') #escaping single quotes inside single quotes with a new line
+#AND using escape sequences to bypass \n, \t 
+print('I am Avian.\nI love coding.') #\n is used for new line
+print('I am Avian.\tI love coding.') #\t is used for tab space
+#AND using escape sequences to write \ by using double backslash \\
+print('I am Avian.\\I love coding.') #\\ is used to write a single backslash \
+
+
