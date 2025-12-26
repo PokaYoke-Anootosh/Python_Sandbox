@@ -410,4 +410,59 @@ print('I am Avian.\tI love coding.') #\t is used for tab space
 #AND using escape sequences to write \ by using double backslash \\
 print('I am Avian.\\I love coding.') #\\ is used to write a single backslash \
 
+#formatted strings (f-strings):
+First_Name = 'Avian'
+Last_Name = 'De'
+print(f' Hey {First_Name}, You\'re a {Last_Name}')
+
+#.format() method:
+First_Name = 'Avian'
+Last_Name = 'De'
+print(' Hey {}, You\'re a {}'.format(First_Name, Last_Name))
+print(' Hey {1}, You\'re a {0}'.format(First_Name, Last_Name)) #using index to change the order
+print(' Hey {fname}, You\'re a {lname}'.format(fname='Avian', lname='De')) #using keyword arguments
+
+Name = 'Avian'
+Age = 27
+Pet_Name = 'Skipper'
+print(f'Hi {Name}, You\'re {Age} years old and your Pet Name is {Pet_Name}')
+
+print('Hi {}, You\'re {} years old and your pet name is {}'.format(Name, Age, Pet_Name))
+print('Hi {1}, You\'re {2} years old and your pet name is {0}'.format(Name, Age, Pet_Name)) 
+
+#String Indexing and Slicing:
+MyString = 'Hello, World!'
+print(MyString[0]) #H
+print(MyString[7]) #W
+print(MyString[-1]) #!
+print(MyString[-6]) #W
+print(MyString[0:5]) #Hello
+print(MyString[7:12]) #World
+print(MyString[:5]) #Hello
+print(MyString[7:]) #World!
+print(MyString[:]) #Hello, World!
+print(MyString[::2]) #Hlo ol!
+print(MyString[1::2]) #el,Wrd
+print(MyString[::-1]) #!dlroW ,olleH
+print(MyString[::-2]) #!lo olH
+
+Intro = 'I am a Gunda'
+print(Intro[3])
+print(Intro[:5])
+print(Intro[6:12])
+print(Intro[6:-1])
+print(Intro[6:-2])
+print(Intro[::])
+print(Intro[:])
+print(Intro[::1])
+print(Intro[::2])
+print(Intro[6::1])
+print(Intro[6::2])
+
+#String Immutability:
+MyStr = 'Hello'
+#MyStr[0] = 'h' #this will give an error because strings are immutable
+New_MyStr = 'h' + MyStr[1:] #creating a new string
+print(New_MyStr)  
+print(MyStr)
 
