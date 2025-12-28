@@ -466,3 +466,32 @@ New_MyStr = 'h' + MyStr[1:] #creating a new string
 print(New_MyStr)  
 print(MyStr)
 
+#Built-in Functions & Methods:
+
+#len() - returns the length of the string
+Greet = 'Hello, World!'
+print(len(Greet)) #returns 13 the length of the string i.e. number of characters including spaces and punctuation
+print(Greet[0:len(Greet)]) #returns the entire string using len() 
+
+#upper() - converts all characters to uppercase
+print(Greet.upper()) #returns 'HELLO, WORLD!'
+
+#lower() - converts all characters to lowercase
+print(Greet.lower()) #returns 'hello, world!' 
+
+#find() - returns the index of the first occurrence of a substring
+print(Greet.find('d!')) #returns 11
+print(Greet.find('!')) #returns 12
+print(Greet.find('z')) #returns -1 (not found) 
+
+#replace() - replaces all occurrences of a substring with another substring 
+print(Greet.replace('World', 'Universe')) #returns 'Hello, Universe! 
+print(Greet) #printing the original string to show that it is unchanged 
+
+#Boolean Methods:
+I_am_Cool = True
+I_am_Cool =False 
+print(I_am_Cool) #returns False
+print(type(I_am_Cool)) #returns <class 'bool'>
+
+
