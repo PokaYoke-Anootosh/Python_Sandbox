@@ -494,4 +494,20 @@ I_am_Cool =False
 print(I_am_Cool) #returns False
 print(type(I_am_Cool)) #returns <class 'bool'>
 
+#Lists : 
+My_List = ['Apple', 'Banana', 'Cherry']
+print(My_List[0]) #returns 'Apple'
+print(My_List[1]) #returns 'Banana'
+print(My_List[2]) #returns 'Cherry'
+print(My_List[-1]) #returns 'Cherry'
+print(My_List[-2]) #returns 'Banana'
+print(My_List[-3]) #returns 'Apple'
+print(My_List[0:2]) #returns ['Apple', 'Banana']
+print(My_List[:2]) #returns ['Apple', 'Banana']
+print(My_List[1:]) #returns ['Banana', 'Cherry']
+print(My_List[:]) #returns ['Apple', 'Banana', 'Cherry'] 
+print(My_List[::2]) #returns ['Apple', 'Cherry']
+print(My_List[::-1]) #returns ['Cherry', 'Banana', 'Apple']
+
+
 
