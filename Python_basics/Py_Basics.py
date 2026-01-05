@@ -507,7 +507,27 @@ print(My_List[:2]) #returns ['Apple', 'Banana']
 print(My_List[1:]) #returns ['Banana', 'Cherry']
 print(My_List[:]) #returns ['Apple', 'Banana', 'Cherry'] 
 print(My_List[::2]) #returns ['Apple', 'Cherry']
-print(My_List[::-1]) #returns ['Cherry', 'Banana', 'Apple']
+print(My_List[::-1]) #returns ['Cherry', 'Banana', 'Apple'] 
+
+#List Slicing and Mutability:
+Fruit_Basket = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry']
+print(Fruit_Basket) #returns the full list before Slicing ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry']
+Fruit_Basket[1:3] = ['Blueberry', 'Cranberry'] #replacing Banana and Cherry with Blueberry and Cranberry with List Slicing
+print(Fruit_Basket) #returns ['Apple', 'Blueberry', 'Cranberry', 'Date', 'Elderberry']
+#Changing the Values again
+Fruit_Basket[0:3] = ['Dragon fruit', 'Almonds', 'Yogurt'] #creating a new list with the first 3 items of Fruit_Basket
+New_Basket = Fruit_Basket[0:3]
+print(New_Basket) #returns ['Dragon fruit', 'Almonds', 'Yogurt']
+print(Fruit_Basket) #returns the full list after Slicing ['Dragon fruit', 'Almonds', 'Yogurt', 'Date', 'Elderberry']
+New_Basket[2] = 'Cheese' #changing the 3rd item of New_Basket
+print(New_Basket) #returns ['Dragon fruit', 'Almonds', 'Cheese']
+print(Fruit_Basket) #returns the full list after Slicing ['Dragon fruit', 'Almonds', 'Yogurt', 'Date', 'Elderberry'] (unchanged
+#because lists are mutable but Slicing creates a new list)
+
+
+
+
+
 
 
 
