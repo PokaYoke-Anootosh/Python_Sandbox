@@ -525,6 +525,16 @@ print(Fruit_Basket) #returns the full list after Slicing ['Dragon fruit', 'Almon
 #because lists are mutable but Slicing creates a new list)
 
 
+#Matrix:
+Matrix = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+]
+
+print(Matrix[0]) #returns [1,2,3]
+print(Matrix[0][1]) #returns 2
+print(Matrix[1][2]) #returns 6
 
 
 
