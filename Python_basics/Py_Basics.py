@@ -531,13 +531,49 @@ Matrix = [
   [4,5,6],
   [7,8,9]
 ]
-
 print(Matrix[0]) #returns [1,2,3]
 print(Matrix[0][1]) #returns 2
 print(Matrix[1][2]) #returns 6
+print(Matrix[2][0]) #returns 7
+print(Matrix[1][1]) #returns 5
+print(Matrix[2][2]) #returns 9
+print(Matrix[0][0]) #returns 1
+print(Matrix[1]) #returns [4,5,6]
+print(Matrix[2]) #returns [7,8,9]
+
+#List Methods:
+MyBasket = ['Laddu', 'Barfi', 'Jalebi'] 
+MyBasket.append('Rasgulla') #adding items to the end of the list
+#MyBasket.append('Gulab Jamun','Kheer') #this will give an error because append() takes only one argument
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Jalebi', 'Rasgulla']
+MyBasket.insert(2, 'Gulab Jamun') #inserting item at index 1
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Gulab Jamun', 'Jalebi', 'Rasgulla']
+MyBasket.extend(['Kheer', 'Peda']) #adding multiple items to the end of the list
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Gulab Jamun', 'Jalebi', 'Rasgulla', 'Kheer', 'Peda
+
+New_List = MyBasket.append('Halwa') #this will return None because append() does not return anything
+print(New_List) #returns None
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Gulab Jamun', 'Jalebi', 'Rasgulla', 'Kheer', 'Peda
+
+MyBasket.pop() #removing the last item from the list
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Gulab Jamun', 'Jalebi', 'Rasgulla', 'Kheer'] as 'Peda' is removed
+MyBasket.pop(2) #removing item at index 2
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Jalebi', 'Rasgulla', 'Kheer'] as 'Gulab Jamun' is removed
+New_List2 = MyBasket.pop(2) #removing item at index 2 and storing it in a new variable
+print(New_List2) #returns 'Jalebi' as it is removed from the list
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Rasgulla', 'Kheer'] as 'Jalebi' is removed 
+
+MyBasket.remove('Barfi') #removing item by value
+print(MyBasket) #returns ['Laddu', 'Jalebi', 'Rasgulla', 'Kheer'] as 'Barfi' is removed
+#MyBasket.remove('Peda') #this will give an error because 'Peda' is not in the list
+New_List3 = MyBasket.remove('Laddu') #removing item by value and storing it in a new variable
+print(New_List3) #returns None because remove() does not return anything
+print(MyBasket) #returns ['Jalebi', 'Rasgulla', 'Kheer'] as 'Laddu' is removed 
+
+MyBasket.clear() #removing all items from the list
+print(MyBasket) #returns [] as the list is now empty 
+MyBasket = ['Laddu', 'Barfi', 'Jalebi', 'Rasgulla', 'Kheer', 'Peda']
 
 
 
-
-
-
+print(MyBasket.index('Jalebi')) #returns 2
