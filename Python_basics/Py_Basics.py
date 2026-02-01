@@ -574,6 +574,19 @@ MyBasket.clear() #removing all items from the list
 print(MyBasket) #returns [] as the list is now empty 
 MyBasket = ['Laddu', 'Barfi', 'Jalebi', 'Rasgulla', 'Kheer', 'Peda']
 
+print(MyBasket.index('Jalebi')) #returns 2 
+print(MyBasket.index('Rasgulla')) #returns 3
+print('Kheer' in MyBasket) #returns True
+print('Halwa' in MyBasket) #returns False
 
+#MyBasket.append('Kala Jamun','Rasgulla') #error because append() takes only one argument
+MyBasket.append('Kala Jamun') #adding 'Kala Jamun' to the end of
+MyBasket.append('Rasgulla') #adding another 'Rasgulla' to the end of the list
+print(MyBasket) #returns ['Laddu', 'Barfi', 'Jalebi', 'Rasgulla', 'Kheer', 'Peda', 'Kala Jamun', 'Rasgulla']
+Count_of_Kala_Jamun = MyBasket.count('Kala Jamun') #counting the number of occurrences of 'Kala Jamun' in the list 
+Count_of_Rasgulla = MyBasket.count('Rasgulla') #counting the number of occurrences of 'Rasgulla' in the list
+print(Count_of_Kala_Jamun) #returns 1
+print(Count_of_Rasgulla) #returns 2 
 
-print(MyBasket.index('Jalebi')) #returns 2
+MyBasket.sort() #sorting the list in ascending order
+print(MyBasket) #returns ['Barfi', 'Jalebi', 'Kheer',
