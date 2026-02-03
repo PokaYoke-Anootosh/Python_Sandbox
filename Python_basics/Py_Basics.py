@@ -589,4 +589,31 @@ print(Count_of_Kala_Jamun) #returns 1
 print(Count_of_Rasgulla) #returns 2 
 
 MyBasket.sort() #sorting the list in ascending order
-print(MyBasket) #returns ['Barfi', 'Jalebi', 'Kheer',
+print(MyBasket) #returns ['Barfi', 'Jalebi', 'Kheer']
+
+print(MyBasket.index('Barfi')) #returns 0
+print(MyBasket.index('Jalebi')) #returns 1
+print(MyBasket.index('Kheer')) #returns 2 
+print(MyBasket.index('Laddu')) #returns 3 
+
+#print(MyBasket.index('Laddu',0,2)) #this will give an error because 'Laddu' is not in the list between index 0 and 2
+print(MyBasket.index('Laddu',2,5)) #returns 3 because 'Laddu' is at index 3 which is between index 2 and 5 
+
+print('Peda' in MyBasket) #returns True
+print('Halwa' in MyBasket) #returns False 
+
+AlphaList = ['d', 'g', 'a', 'c', 'b', 'e']
+#AlphaList.sort() #sorting the list in ascending order
+#print(AlphaList) #returns ['a', 'b', 'c', 'd', 'e'...] 
+print(sorted(AlphaList)) #returns a new sorted list ['a', 'b', 'c', 'd', 'e'...] without changing the original list
+print(AlphaList) #printing the original list to show that it is unchanged 
+
+print(AlphaList.copy()) #creating a copy of the list
+AlphaList.reverse() #reversing the list 
+print(AlphaList) #printing the reversed list 
+AlphaList.sort() #sorting the list in ascending order
+print(AlphaList.reverse()) #this will return None because reverse() does not return anything
+print(AlphaList) #printing the sorted list 
+
+
+
