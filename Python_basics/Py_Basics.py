@@ -614,6 +614,44 @@ print(AlphaList) #printing the reversed list
 AlphaList.sort() #sorting the list in ascending order
 print(AlphaList.reverse()) #this will return None because reverse() does not return anything
 print(AlphaList) #printing the sorted list 
+print(AlphaList[::-1]) #printing the sorted list in reverse order using List slicing 
+print(AlphaList) #printing the sorted list to show that it is unchanged 
 
+range(1,50) #this will create a range object from 1 to 49
+print(range(1,50)) #this will print the range object
+print(list(range(1,50))) #this will print the list of numbers from 1 to 49 
 
+My_Intro = 'Hello' 
+print(My_Intro) #returns 'Hello' 
+My_Intro.join([',','I', 'am', 'Avian']) #this will return 'HIamHAvianH' because join() takes the string and joins it with the items in the list using the string as a separator 
+print(My_Intro) #printing the original string to show that it is unchanged 
+My_Intro_with_Name = My_Intro.join(['Hi', 'My', 'Name', 'is', 'Avian']) #this will return 'Hi Hello My Hello Name Hello is Hello Avian' because join() takes the string and joins it with the items in the list using the string as a separator
+print(My_Intro_with_Name) #returns 'Hi Hello My Hello Name Hello is Hello Avian' 
+print(' '.join(['Hi', 'My', 'Name', 'is', 'Avian'])) #this will return 'Hi My Name is Avian' because join() takes the string and joins it with the items in the list using the string as a separator 
+
+My_Name = ' Avian, ' 
+Name_with_Intro = My_Name.join(['Hi','How are you?', 'Welcome to the Coding Jungle']) #this will return 'HiAvianHow are you,AvianWelcome to the Coding Jungle' because join() takes the string and joins it with the items in the list using the string as a separator 
+print(Name_with_Intro) #returns 'HiAvianHow are you,AvianWelcome to the Coding Jungle' 
+
+#List Unpacking: 
+L1, L2, L3 = ['Bird', 'Dog', 'Cat'] #unpacking the list into 3 variables 
+print(L1) #returns 'Bird' 
+print(L2) #returns 'Dog' 
+print(L3) #returns 'Cat' 
+print(L1, L2, L3) #returns 'Bird Dog Cat' 
+
+L1, L2, L3, *Wild = ['Bird', 'Dog', 'Cat', 'Bear', 'Cow', 'Horse', 'Rabbit', 'Pig', 'Sheep', 'Goat'] #unpacking the list into 3 variables and the rest of the items in the list are stored in a new variable called Wild 
+print(L1) #returns 'Bird' 
+print(L2) #returns 'Dog' 
+print(L3) #returns 'Cat' 
+print(Wild) #returns ['Bear', 'Cow', 'Horse', 'Rabbit', 'Pig', 'Sheep', 'Goat'] 
+L1, L2, L3, *Wild, Cattle = ['Bird', 'Dog', 'Cat', 'Bear', 'Cow', 'Horse', 'Rabbit', 'Pig', 'Sheep', 'Goat'] #unpacking the list into 3 variables and the rest of the items in the list are stored in a new variable called Wild and the last 2 items in the list are stored in new variables called Cattle 
+print(L1) #returns 'Bird' 
+print(L2) #returns 'Dog' 
+print(L3) #returns 'Cat' 
+print(Wild) #returns ['Bear', 'Cow', 'Horse', 'Rabbit', 'Pig', 'Sheep'] 
+print(Cattle) #returns 'Goat' 
+
+Null_Value_in_Python = None #None is a special value in Python that represents the absence of a value or a null value 
+print(Null_Value_in_Python) #returns None 
 
