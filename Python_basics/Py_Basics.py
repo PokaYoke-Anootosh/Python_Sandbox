@@ -655,3 +655,93 @@ print(Cattle) #returns 'Goat'
 Null_Value_in_Python = None #None is a special value in Python that represents the absence of a value or a null value 
 print(Null_Value_in_Python) #returns None 
 
+#Dictionary (dict): 
+My_Lunch={
+  'Sunday' : 'Biriyani', 
+  'Monday' : 'Daal Chawal', 
+  'Tuesday' : 'Rajma Chawal',
+  'Wednesday' : 'Chole Bhature',
+  'Thursday' : 'Pasta',
+  'Friday' : 'Pizza',
+  'Saturday' : 'Burger'
+} 
+
+print(My_Lunch['Monday']) #returns 'Daal Chawal'
+print(My_Lunch['Friday']) #returns 'Pizza'
+print(My_Lunch['Sunday']) #returns 'Biriyani'
+print(My_Lunch['Wednesday']) #returns 'Chole Bhature'
+print(My_Lunch['Thursday']) #returns 'Pasta' 
+
+IAF ={
+    'Fighters' : ['Tejas', 'Su-30MKI', 'MiG-29', 'Mirage 2000', 'Rafale'],
+    'Transporters' : ['C-130J', 'C-17', 'An-32', 'IL-76'],
+    'Helicopters' : ['AH-64E', 'Rudra', 'Chinook', 'Apache'],
+    'Trainers' : ['HJT-16 Kiran', 'HJT-36 Sitara', 'BAE Hawk', 'Pilatus']
+      }
+
+print(IAF['Fighters']) #returns ['Tejas', 'Su-30MKI', 'MiG-29', 'Mirage 2000']
+print(IAF['Transporters']) #returns ['C-130J', 'C-17', 'An-32', 'IL-76']
+print(IAF['Helicopters']) #returns ['AH-64E', 'Rudra', 'Chinook', 'Apache']
+print(IAF['Trainers']) #returns ['HJT-16 Kiran', 'HJT-36 Sitara', 'BAE Hawk', 'Pilatus PC-7 Mk II'] 
+print(IAF['Fighters'][0]) #returns 'Tejas'
+print(IAF['Transporters'][2]) #returns 'An-32'
+print(IAF['Helicopters'][3]) #returns 'Apache'
+print(IAF['Trainers'][1]) #returns 'HJT-36 Sitara' 
+#What will give an error: 
+#print(IAF['Fighters']['Mig-21']) #this will give an error because 'Mig-21' is not in the list of Fighters
+#print(IAF['Fighters'][5]) #this will give an error because there are only 5 items in the list of Fighters and the index starts from 0, so the last index is 4
+#print(IAF['Transporters']['Globemaster']) #this will give an error because 'Globemaster' is not in the list of Transporters
+#print(IAF['Helicopters'][4]) #this will give an error because there are only 4 items in the list of Helicopters and the index starts from 0, so the last index is 3
+
+My_Breakfast = {
+  'Sunday' : ['Oats', 'Eggs', 'Toast'],
+  'Monday' : ['Pancakes', 'Bacon', 'Syrup'],
+  'Tuesday' : [24, 25, 35], 
+  'Wednesday' : ['Idli', 'Sambar', 'Chutney'],
+  #'Thursday' : [My_Breakfast['Monday'][1], 'Curd', 'Pickle'], #this will give an error because My_Breakfast is not defined yet, we cannot use a variable before it is defined
+  'Thursday' : [My_Lunch['Monday'][0:4], 'Curd', 'Pickle'], #this will work because My_Lunch is defined before My_Breakfast and we can use the value of My_Lunch['Monday'][0] which is 'Daal Chawal' in the list of Thursday
+  'Friday' : ['Cereal', 'Milk', 'Banana'],
+  'Saturday' : ['Paratha', 'Curd', 'Aloo Sabzi']
+}
+
+print(My_Breakfast['Sunday']) #returns ['Oats', 'Eggs', 'Toast']
+print(My_Breakfast['Monday'][1]) #returns 'Bacon'
+print(My_Breakfast['Tuesday']) #returns [24, 25, 35]
+print(My_Breakfast['Thursday'][0]) #returns ['Daal', 'Chole Bhature', 'Pasta', 'Pizza'] because My_Lunch['Monday'][0:4] returns the first 4 items in the list of My_Lunch['Monday'] which is 'Daal' 
+
+#Dict inside a List: 
+My_Dict_List = [
+  {
+    'Name' : 'Avian',
+    'Age' : 27,
+    'Can_Swim' : True,
+    'Can_Fly' : False,
+    'Can_Drive' : True,
+    'Can_Shoot' : False
+  },
+  {
+    'Name' : 'John',
+    'Age' : 30,
+    'Can_Swim' : False,
+    'Can_Fly' : False,
+    'Can_Drive' : True,
+    'Can_Shoot' : True
+  },
+  {
+    'Name' : 'Jane',
+    'Age' : 25,
+    'Can_Swim' : True,
+    'Can_Fly' : False,
+    'Can_Drive' : False,
+    'Can_Shoot' : False
+  }
+] 
+
+print(My_Dict_List[0]['Name']) #returns 'Avian'
+print(My_Dict_List[1]['Age']) #returns 30 
+#print(My_Dict_List[1][3]) #this will give an error because we cannot access the value of a dictionary using an index, we have to use the key to access the value
+print(My_Dict_List[2]['Can_Fly']) #returns False 
+
+
+
+
