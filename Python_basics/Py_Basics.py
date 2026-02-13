@@ -742,6 +742,102 @@ print(My_Dict_List[1]['Age']) #returns 30
 #print(My_Dict_List[1][3]) #this will give an error because we cannot access the value of a dictionary using an index, we have to use the key to access the value
 print(My_Dict_List[2]['Can_Fly']) #returns False 
 
+#Dictionary/Dict Keys cannot be a List because lists are mutable and can be changed, so they cannot be used as keys in a dictionary. Keys in a dictionary must be immutable, which means they cannot be changed after they are created. Examples of immutable types that can be used as keys in a dictionary include strings, numbers, and tuples.
+#Dictionary prioritizes Unique Keys (immutable) over values, so if we have a dictionary with duplicate keys, the last key will overwrite the previous keys and their values. For example:
 
+#Dictionary Methods:
+Heroes = {
+  'Hero1': 'Bigus Dickus',
+  'Age': 35,
+  'Can_Fly': False,
+  'Can_Swim': True,
+  'Spl. Powers' : ['Stealth','Infiltration','Penetration Strikes'], 
+
+  'Hero2': 'Humungus Jerkus', 
+  'Age': 40, 
+  'Can_Fly': True,
+  'Can_Swim': False,
+  'Spl. Powers' : ['Speed','Quake-Fists','Cannon shots'], 
+
+  'Hero3': 'Tinyus Weakus',
+  'Age': 28,
+  'Can_Fly': False,
+  'Can_Swim': False,
+  'Spl. Powers' : ['Invisibility','Smart-talker','Beat-boxing'],  
+
+  'Hero4': 'Dumbus Assus',
+  'Age': 30,
+  'Can_Fly': False,
+  'Can_Swim': True,
+  'Spl. Powers' : ['Influencer','Loud Noises','Farting'],  
+
+  'Hero5': 'Stupidus Smartus',
+  'Age': 32,
+  'Can_Fly': False,
+  'Can_Swim': True,
+  'Spl. Powers' : ['Strategist','Inventor','Reader of Books'],  
+
+  'Hero6': 'Sexyus Hotus',
+  'Age': 29,
+  'Can_Fly': True,
+  'Can_Swim': False,
+  'Spl. Powers' : ['Beauty & Charm','Seduction','Flirting']
+}
+
+print(Heroes) #returns the full dictionary with all the keys and values, but the duplicate keys 'Age', 'Can_Fly', 'Can_Swim', and 'Spl. Powers' will be overwritten by the last key-value pair, so the final dictionary will only have one key for each of these duplicate keys with the value of the last key-value pair.
+
+#Checking if an item exists in a Dictionary with 'in' keyword -
+print('Weakness' in Heroes) #returns False because 'Weakness' is not a key in the dictionary
+print('Hero1' in Heroes) #returns True because 'Hero1' is a key in the dictionary
+
+#.get Method -
+print(Heroes.get('Can_Dance')) #returns None because 'Can_Dance' is not a key in the dictionary
+print(Heroes.get('Can_Dance', 'Not Found')) #returns 'Not Found' which replaces 'None' in the same scenario as above 
+
+#.keys() method -
+print(Heroes.keys()) #returns a view object that displays a list of all the keys
+print('Age' in Heroes.keys()) #returns True because 'Age' is a key in the dictionary 
+print('Age' in Heroes.values()) #returns False because 'Age' is a key in the dictionary, not a value 
+
+#.values() method -
+print(Heroes.values()) #returns a view object that displays a list of all the values
+print('Bigus Dickus' in Heroes.values()) #returns True because 'Bigus Dickus' is a value in the dictionary 
+print('Bigus Dickus' in Heroes.keys()) #returns False because 'Bigus Dickus' is a value in the dictionary, not a key 
+
+#.items() method -
+print(Heroes.items()) #returns a view object that displays a list of dictionary's key-value tuple pairs
+
+#.copy() method -
+Heroes_Copy = Heroes.copy() #creates a shallow copy of the dictionary
+print(Heroes_Copy) #returns {} as the original dictionary is empty 
+
+#.pop() method -
+Heroes.pop('Hero1') #removes the key 'Hero1' and its value from the dictionary
+print(Heroes) #returns the dictionary without 'Hero1' and its value
+
+#.popitem() method -
+Heroes.popitem() #removes the last key-value pair from the dictionary
+print(Heroes) #returns the dictionary without the last key-value pair
+
+#.update() method -
+Heroes.update({'Hero6': 'Hotus Sexyus'}) #updates the value of 'Hero6' to 'Hotus Sexyus'
+print(Heroes) #returns the dictionary with the updated value of 'Hero6'
+
+#Adding an Item with .update() method -
+Heroes.update({'HeroX': 'Elonus Muskus Spermus', 'Age': 1000, 'Can_Fly': True, 'Can_Swim': True, 'Spl. Powers' : ['Tweeting Stupid stuff', 'Bitcoin Jerky', 'Half-Martian']}) #this will add a new key-value pair to the dictionary with the key 'HeroX' and the value 'Elonus Muskus Spermus'
+print(Heroes) #returns the dictionary with the new key-value pair added and the value of 'Age', 'Can_Fly', 'Can_Swim', and 'Spl. Powers' updated to the new values because of the duplicate keys 
+
+Heroes.update({'Hero1': 'Bigus Dickus'}) #Re-Updating Hero1 as 'Bigus Dickus' but not in the same order as before
+print(Heroes) #returns the dictionary with 'Hero1' added back to the dictionary but not in the same order as before because dictionaries do not maintain order of items
+
+#.clear() method - 
+Heroes.clear() #removes all items from the dictionary
+print(Heroes) #returns {} as the dictionary is now empty
+
+#dict() function - creates a dictionary from a list of key-value pairs or from keyword arguments -
+All_Users= dict(name='Avian', age=27, can_swim=True, can_fly=False) #creating a dictionary using the dict() function with keyword arguments
+print(All_Users) #returns {'name': 'Avian', 'age': 27, 'can_swim': True, 'can_fly': False}
+#this gives an error because the syntax for creating a dictionary using the dict() function is incorrect, we should use keyword arguments instead of key-value pairs separated by commas. The correct syntax is: dict(name='Avian', age=27, can_swim=True, can_fly=False)
+#All_Users = dict('name' = 'Avian', 'age' = 27, 'can_swim' = True, 'can_fly' = False) 
 
 
