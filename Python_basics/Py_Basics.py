@@ -840,4 +840,82 @@ print(All_Users) #returns {'name': 'Avian', 'age': 27, 'can_swim': True, 'can_fl
 #this gives an error because the syntax for creating a dictionary using the dict() function is incorrect, we should use keyword arguments instead of key-value pairs separated by commas. The correct syntax is: dict(name='Avian', age=27, can_swim=True, can_fly=False)
 #All_Users = dict('name' = 'Avian', 'age' = 27, 'can_swim' = True, 'can_fly' = False) 
 
+#Tuples:
+My_Tuple = ('Apple', 'Banana', 'Cherry')
+print(My_Tuple) #returns ('Apple', 'Banana', 'Cherry') 
+print(My_Tuple[0]) #returns 'Apple'
+print(My_Tuple[1]) #returns 'Banana' 
+
+#My_Tuple[0] = 'Grapes' #this will give an error because tuples are immutable and cannot be changed after they are created 
+My_New_Tuple = (My_Tuple[0:2], 'Pomogranate') #creates a new tuple with the first two items of the original tuple
+print(My_New_Tuple) #returns (('Apple', 'Banana'), 'Pomogranate')
+
+#Tuple Methods:
+print(My_Tuple.count('Apple')) #returns 1 because 'Apple' appears once in the tuple
+print(My_Tuple.count('Grapes')) #returns 0 because 'Grapes' does not appear in the tuple
+print(My_Tuple.index('Banana')) #returns 1 because 'Banana' is at index 1 in the tuple
+#My_Tuple.index('Grapes') #this will give an error because 'Grapes' is not in the tuple
+print(len(My_Tuple)) #returns 3 because there are 3 items in the tuple 
+
+#Set:
+My_Set = {'Apple', 'Banana', 'Cherry'} 
+#a Set is an unordered collection of unique items, so it does not maintain the order of items and does not allow duplicate items
+print(My_Set) #returns {'Cherry', 'Apple', 'Banana'} (the order may vary because sets do not maintain order
+print('Apple' in My_Set) #returns True because 'Apple' is in the set
+print('Grapes' in My_Set) #returns False because 'Grapes' is not in the set
+
+#Set methods:
+My_Set.add('Grapes') #adding 'Grapes' to the set
+print(My_Set) #returns {'Cherry', 'Apple', 'Banana', 'Grapes'} (the order may vary because sets do not maintain order
+My_Set.add('Apple') #this will not add 'Apple' to the set because it is already in the set and sets do not allow duplicate items
+print(My_Set) #returns {'Cherry', 'Apple', 'Banana', 'Grapes'} (the order may vary because sets do not maintain order
+print(len(My_Set)) #returns 4 because there are 4 unique items in the set
+My_Set.remove('Banana') #removing 'Banana' from the set
+print(My_Set) #returns {'Cherry', 'Apple', 'Grapes'} (the order may vary because sets do not maintain order
+#My_Set.remove('Mango') #this will give an error because 'Mango' 
+
+#sets do not support indexing and slicing like lists and tuples, we cannot access the items in a set using an index or a slice, 
+#we can only check if an item is in the set using the 'in' keyword or we can iterate through the set using a for loop.
+#print(My_Set[2]) #this will give an error because 
+
+print('Mango' in My_Set) #returns False because 'Mango' is not in the set
+print('Grapes' in My_Set) #returns True because 'Grapes'
+
+My_New_Set = My_Set.copy() #creates a shallow copy of the set
+print(My_New_Set) #returns {'Cherry', 'Apple', 'Grapes'} (the order may vary because sets do not maintain order
+My_Set.clear() #removes all items from the set
+print(My_Set) #returns set() as the set is now empty 
+
+My_Set_of_Cars = {'Alto','Swift','Thar','Exeter','Jimny'}
+Your_Set_of_Cars = {'Thar','Fortuner','Innova','Baleno'}
+
+#Telling the Difference between two sets using the difference() method -
+print(My_Set_of_Cars.difference(Your_Set_of_Cars)) #returns {'Alto', 'Swift', 'Exeter', 'Jimny'} which are the items that are in My_Set_of_Cars but not in Your_Set_of_Cars
+print(Your_Set_of_Cars.difference(My_Set_of_Cars)) #returns {'Fortuner', 'Innova', 'Baleno'} which are the items that are in Your_Set_of_Cars but not in My_Set_of_Cars
+
+#Updating a set with the difference_update() method -
+print(My_Set_of_Cars.difference_update(Your_Set_of_Cars)) #this will update My_Set_of_Cars to only have the items that are in My_Set_of_Cars but not in Your_Set_of_Cars
+print(My_Set_of_Cars) #returns {'Alto', 'Swift', 'Exeter', 'Jimny'} (the order may vary because sets do not maintain order
+print(Your_Set_of_Cars) #returns {'Thar', 'Fortuner', 'Innova', 'Baleno'} (the order may vary because sets do not maintain order 
+
+My_Set_of_Cars.add('Jimny') #adding 'Jimny' back to My_Set_of_Cars  
+print(My_Set_of_Cars.discard('Jimny')) #removes 'Jimny' from My_Set_of_Cars
+print(My_Set_of_Cars) #returns {'Alto', 'Swift', 'Exeter'} (the order may vary because sets do not maintain order
+print(My_Set_of_Cars.discard('XUV')) #this will not give an error even though XUV is not part of the set 
+print(My_Set_of_Cars) #returns {'Alto', 'Swift', 'Thar', 'Exeter'}, the order may vary because sets do not maintain order
+My_Set_of_Cars.add('Thar') #adding 'Thar' back to My_Set_of_Cars 
+
+#Opposite of Set.difference() method is the intersection() method which returns the items that are in both sets, and the opposite of difference_update() method is the intersection_update() method which updates the set to only have the items that are in both sets.
+print(My_Set_of_Cars.intersection(Your_Set_of_Cars)) #returns {'Thar'} which is the only item that is in both sets
+print(My_Set_of_Cars.intersection_update(Your_Set_of_Cars)) #this will update My_Set_of_Cars to only have the items that are in both sets 
+print(My_Set_of_Cars) #returns {'Thar'} which is the only item that is in both sets 
+
+#Union of two sets: 
+print(My_Set_of_Cars.union(Your_Set_of_Cars)) #returns {'Thar', 'Alto', 'Swift', 'Exeter', 'Fortuner', 'Innova', 'Baleno'} which is the set of all unique items that are in either My_Set_of_Cars or Your_Set_of_Cars or both 
+#Shortcuts for set operations:
+print(My_Set_of_Cars | Your_Set_of_Cars) #this is a shortcut for the union of two sets and returns the same result as the union() method
+print(My_Set_of_Cars & Your_Set_of_Cars) #this is a shortcut for the intersection of two sets and returns the same result as the intersection() method 
+
+
+
 
