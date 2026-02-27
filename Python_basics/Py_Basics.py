@@ -82,6 +82,8 @@
 #Lists 
 from typing import Counter
 
+from sympy import false
+
 
 Amazon_cart = ['Notebooks', 'Sunglasses', 'Toys', 'Grapes']
 print(Amazon_cart[0:2])
@@ -912,10 +914,49 @@ print(My_Set_of_Cars) #returns {'Thar'} which is the only item that is in both s
 
 #Union of two sets: 
 print(My_Set_of_Cars.union(Your_Set_of_Cars)) #returns {'Thar', 'Alto', 'Swift', 'Exeter', 'Fortuner', 'Innova', 'Baleno'} which is the set of all unique items that are in either My_Set_of_Cars or Your_Set_of_Cars or both 
-#Shortcuts for set operations:
+#Short-hand for set operations:
 print(My_Set_of_Cars | Your_Set_of_Cars) #this is a shortcut for the union of two sets and returns the same result as the union() method
 print(My_Set_of_Cars & Your_Set_of_Cars) #this is a shortcut for the intersection of two sets and returns the same result as the intersection() method 
 
+#Subset and Superset:
+Eicher_Motors_Set = {'Trucks','Buses','Vans', '350cc Motorcycles', '650cc Motorcycles'} 
+Royal_Enfield_Set = {'350cc Motorcycles', '650cc Motorcycles'}
+#Because Royal_Enfield_Set is a subset of Eicher_Motors_Set because all items in Royal_Enfield_Set are also in Eicher_Motors_Set, but Eicher_Motors_Set is not a subset of Royal_Enfield_Set because not all items in Eicher_Motors_Set are in Royal_Enfield_Set
+print(Royal_Enfield_Set.issubset(Eicher_Motors_Set)) #returns True because all items in Royal_Enfield_Set are also in Eicher_Motors_Set
+print(Eicher_Motors_Set.issubset(Royal_Enfield_Set)) #returns False because not all items in Eicher_Motors_Set are in Royal_Enfield_Set
+#Because Eicher_Motors_Set is a superset of Royal_Enfield_Set because all items in Royal_Enfield_Set are also in Eicher_Motors_Set, but Royal_Enfield_Set is not a superset of Eicher_Motors_Set because not all items in Eicher_Motors_Set are in Royal_Enfield_Set
+print(Eicher_Motors_Set.issuperset(Royal_Enfield_Set)) #returns True because all items in Royal_Enfield_Set are also in Eicher_Motors_Set
+print(Royal_Enfield_Set.issuperset(Eicher_Motors_Set)) #returns False because not all items in Eicher_Motors_Set are in Royal_Enfield_Set
 
+#If, Elif and Else Statements: 
 
+#Example1 - 
+I_Am_Optimus_Prime = False 
+I_Am_Megatronus = False
+I_Am_Jeff_Bezotron = False
+I_Am_Donaldus_Trumpetus = False
+
+if I_Am_Optimus_Prime:
+  print('Calling All Autobots, Transform and Roll out!') #this will be printed if Optimus_Prime is True
+elif I_Am_Megatronus:
+  print('Decepticons, Transform and Rise up!') #this will be printed if Megatronus is True
+elif I_Am_Jeff_Bezotron:
+  print('There\'s a New Prime in Cybertron...Amazon Prime') #this will be printed if Jeff_Bezotron is True
+elif I_Am_Donaldus_Trumpetus:
+  print('Make Cybertron Great Again, Where\'s my ICE (Interplanetary Cybertronian Eliminators) Army!') #this will be printed if Donaldus_Trumpetus is True
+elif I_Am_Optimus_Prime and I_Am_Megatronus:
+  print('Hunt for the Allspark is on') #this will be printed if I_Am_Optimus_Prime and I_Am_Megatronus are both True 
+else:
+  print('Hail Primus, Next is Hailey!') #this will be printed if all arguements above are False 
+
+#Example2 - 
+Donaldus_Trumpetus_Stops_Wars = True
+Donaldus_Trumpetus_Gets_Nobel_Peace_Prize = True
+
+if Donaldus_Trumpetus_Stops_Wars: 
+  print('Putin a War Hero, and Kim Jong Un a Peace Ambassador!') 
+elif Donaldus_Trumpetus_Stops_Wars and Donaldus_Trumpetus_Gets_Nobel_Peace_Prize: 
+  print('God Save the World!') 
+else:
+  print('Modi is now Christian. Pakistan is now a Hindu Country, America Loves Mexicans!') 
 
