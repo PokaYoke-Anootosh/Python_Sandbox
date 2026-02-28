@@ -958,5 +958,46 @@ if Donaldus_Trumpetus_Stops_Wars:
 elif Donaldus_Trumpetus_Stops_Wars and Donaldus_Trumpetus_Gets_Nobel_Peace_Prize: 
   print('God Save the World!') 
 else:
-  print('Modi is now Christian. Pakistan is now a Hindu Country, America Loves Mexicans!') 
+  print('Modi is now Christian. Pakistan is now a Hindu Country, America Loves China (again)!') 
 
+#Truthy & Falsy Values:
+#In Python, the following values are considered Falsy:
+#None
+#False
+#0 (zero of any numeric type)
+#0.0 (zero of float type)
+#0j (zero of complex type)
+#'' (empty string)
+#[] (empty list)
+#() (empty tuple)
+#{} (empty dictionary)
+#set() (empty set)
+#All other values are considered Truthy, which means they will evaluate to True in a boolean context. For example:
+
+#Example1: 
+Your_Username = input('Enter your username: ') 
+Your_Password = input('Enter your password: ') 
+
+if Your_Username and Your_Password: #this will check if Your_Username is not empty, if it
+  print(f'Welcome {Your_Username}!') 
+else:
+  print('Please enter both username and password!') 
+
+
+#Example2: 
+Name = input('What is your name? ')
+Age = int(input('How Old are you? '))
+Weight = input('How much do you Weigh? (Optional) ')
+
+if Name and Age > 18: #this will check if Name is not empty and Age is greater than 18, if both conditions are True, it will print the message below
+  print(f'Welcome {Name}, You\'re old enough to Enter the Pool!') 
+elif Name and Age < 18: #this will check if Name is not empty and Age is less than 18, if both conditions are True, it will print the message below
+  print(f'Sorry {Name}, You\'re not old enough to Enter the Pool!') 
+elif Name: #this will check if Name is not empty, if it is True, it will print the message below
+  print(f'Hello {Name}, You need to Enter your Age for Verification!') 
+else: #this will be executed if Name is empty, which means the user did not enter their name, it will print the message below
+  print('Sorry, You cannot Enter the Pool without both ID & Age Verfification !') 
+
+
+
+  
