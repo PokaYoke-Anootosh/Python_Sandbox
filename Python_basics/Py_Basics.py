@@ -986,18 +986,90 @@ else:
 
 #Example2: 
 Name = input('What is your name? ')
-Age = int(input('How Old are you? '))
+Age = input('How Old are you? ')
 Weight = input('How much do you Weigh? (Optional) ')
 
-if Name and Age > 18: #this will check if Name is not empty and Age is greater than 18, if both conditions are True, it will print the message below
+if Name and Age.isdigit() and int(Age) > 18: #this will check if Name is not empty and Age is greater than 18, if both conditions are True, it will print the message below
   print(f'Welcome {Name}, You\'re old enough to Enter the Pool!') 
-elif Name and Age < 18: #this will check if Name is not empty and Age is less than 18, if both conditions are True, it will print the message below
+elif Name and Age.isdigit() and int(Age) < 18: #this will check if Name is not empty and Age is less than 18, if both conditions are True, it will print the message below
   print(f'Sorry {Name}, You\'re not old enough to Enter the Pool!') 
 elif Name: #this will check if Name is not empty, if it is True, it will print the message below
+  print(f'Hello {Name}, You need to Enter your Age for Verification!') 
+elif not Age.isdigit() or Age == '0': #this will check if Age is not a digit or if Age is equal to '0', if either condition is True, it will print the message below
   print(f'Hello {Name}, You need to Enter your Age for Verification!') 
 else: #this will be executed if Name is empty, which means the user did not enter their name, it will print the message below
   print('Sorry, You cannot Enter the Pool without both ID & Age Verfification !') 
 
 
+#Ternary Operators: 
+#Ternary operators are a shorthand way of writing an if-else statement in a single line. The syntax for a ternary operator is:
+#value_if_true if condition else value_if_false 
 
+#Example1: 
+Age = int(input('How Old are you? '))
+Can_Drive = 'Yes' if Age >= 18 else 'Not Eligible' #this will check if Age is greater than or equal to 18, if it is True, it will assign 'Yes' to Can_Drive, otherwise it will assign 'Not Eligible' to Can_Drive 
+
+print(Can_Drive) #this will print the value of Can_Drive based on the condition above
   
+#Example2: 
+Number = int(input('Enter a Number: ')) 
+Even_or_Odd = 'Even' if Number % 2 == 0 else 'Odd' #this will check if the number is even or odd, if the number is divisible by 2 with no remainder, it will assign 'Even' to Even_or_Odd, otherwise it will assign 'Odd' to Even_or_Odd
+
+print(Even_or_Odd) #this will print whether the number is even or odd based on the condition above
+
+#Short-Circuiting with Ternary Operators:
+#In Python, the ternary operator also supports short-circuiting, which means that if
+
+Is_Friend = True
+Can_Borrow_Money = True
+
+if Is_Friend and Can_Borrow_Money:
+  print('You can borrow money from your friend!')
+else:  print('You cannot borrow money from your friend!') 
+
+#Here if Is_Friend is False, the condition Can_Borrow_Money will 
+# not be evaluated because of short-circuiting, and the else block 
+# will be executed, which means you cannot borrow money from your friend. 
+# If Is_Friend is True, then the condition Can_Borrow_Money will be 
+# evaluated, and if it is also True, then the if block will be executed, 
+# which means you can borrow money from your friend. 
+
+#Logical Operators: 
+#== (Equality Operator) - checks if two values are equal and returns True if they are equal, otherwise it returns False
+#!= (Not Equal Operator) - checks if two values are not equal and returns True if they are not equal, otherwise it returns False
+#> (Greater Than Operator) - checks if the value on the left is greater than the value on the right and returns True if it is, otherwise it returns False
+#< (Less Than Operator) - checks if the value on the left is less than the value on the right and returns True if it is, otherwise it returns False
+#>= (Greater Than or Equal To Operator) - checks if the value on the left is greater than or equal to the value on the right and returns True if it is, otherwise it returns False
+#<= (Less Than or Equal To Operator) - checks if the value on the left is less than or equal to the value on the right and returns True if it is, otherwise it returns False 
+#not (Logical NOT Operator) - negates the value of a boolean expression and returns True if the expression is False, and returns False if the expression is True
+#and (Logical AND Operator) - returns True if both expressions are True, otherwise it returns False
+#or (Logical OR Operator) - returns True if at least one of the expressions is True, otherwise it returns False
+
+print(5 == 5) #returns True because 5 is equal to 5
+print(5 != 5) #returns False because 5 is not not equal to 5
+print(5 > 3) #returns True because 5 is greater than 3
+print(5 < 3) #returns False because 5 is not less than 3
+print(5 >= 5) #returns True because 5 is greater than or equal to 5
+print(5 <= 5) #returns True because 5 is less than or equal to 5
+print(not True) #returns False because the negation of True is False
+print(not False) #returns True because the negation of False is True
+print(True and True) #returns True because both expressions are True
+print(True and False) #returns False because one of the expressions is False
+print(False and False) #returns False because both expressions are False
+print(True or True) #returns True because at least one of the expressions is True
+print(True or False) #returns True because at least one of the expressions is True  
+print(False or False) #returns False because both expressions are False 
+
+#Excercise: 
+is_magician = True
+is_expert = False
+
+if is_magician and is_expert:
+  print('You\'re a Master Magician!') 
+elif is_magician and not is_expert:
+  print('At least you\'re getting there!')
+else: 
+  print('You need magic powers!') 
+
+
+
