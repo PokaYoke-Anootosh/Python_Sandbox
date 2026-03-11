@@ -1071,5 +1071,31 @@ elif is_magician and not is_expert:
 else: 
   print('You need magic powers!') 
 
+#is vs == :
+#The 'is' operator checks for identity, which means it checks 
+# if two variables point to the same object in memory. 
 
+print(True == 1) #returns True because the value of True is equal to 1, but they are not the same object in memory
+print('1' == 1) #returns False because the value of '1' is not equal to the value of 1, and they are not the same object in memory 
+print([] == []) #returns True because the value of both lists is equal (both are empty lists), but they are not the same object in memory
+print(10 == 10.0) #returns True because the value of 10 is equal to 10, but they are not the same object in memory
+print([1,2,3] == [1,2,3]) #returns True because the value of both lists is equal (both have the same elements), but they are not the same object in memory
+
+a = [1,2,3]
+b = [1,2,3] 
+print(a == b) #returns True because the value of both lists is equal (both have the same elements), but they are not the same object in memory
+
+# The '==' operator checks for equality, which means it checks if 
+# the values of the variables are equal, regardless of whether 
+# they are the same object in memory or not.  
+
+print(True is 1) #returns False because True and 1 are not the same object in memory, even though their values are equal
+print('1' is 1) #returns False because '1' and 1 are not the same object in memory, and their values are not equal
+print([] is []) #returns False because both lists are empty and have the same value, but they are not the same object in memory
+print(10 is 10.0) #returns False because 10 and 10.0 are not the same object in memory, even though their values are equal
+print([1,2,3] is [1,2,3]) #returns False because both lists have the same value (same elements), but they are not the same object in memory
+
+a=[1,2,3]
+b=[1,2,3] 
+print(a is b) #returns True because a and b point to the same object in memory
 
