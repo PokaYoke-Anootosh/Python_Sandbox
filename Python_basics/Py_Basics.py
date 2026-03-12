@@ -1099,3 +1099,7 @@ a=[1,2,3]
 b=[1,2,3] 
 print(a is b) #returns True because a and b point to the same object in memory
 
+#For Loops: 
+for i in [1,2,3,4,5]: 
+  print(i) #this will print the numbers from 1 to 5, each on a new line 
+
