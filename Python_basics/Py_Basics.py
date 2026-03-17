@@ -1103,3 +1103,44 @@ print(a is b) #returns True because a and b point to the same object in memory
 for i in [1,2,3,4,5]: 
   print(i) #this will print the numbers from 1 to 5, each on a new line 
 
+#Nested For Loops: 
+for i in [1,2,3]: 
+  for j in ['a','b','c']:
+    print(i, j) #this will print the combination of numbers and letters, each on a new line 
+
+#Looping a Dictionary: 
+My_Lunch = {
+  'Sunday' : 'Biriyani',
+  'Monday' : 'Daal Chawal',
+  'Tuesday' : 'Rajma Chawal',
+  'Wednesday' : 'Chole Bhature',
+  'Thursday' : 'Pasta',
+  'Friday' : 'Pizza',
+  'Saturday' : 'Burger'
+} 
+
+#This will print only the Keys in My_Lunch dict:  
+for Day in My_Lunch:
+  print(Day) #this will print the keys of the dictionary, which are the days of the week, each on a new line 
+
+#OR
+
+for Day in My_Lunch.keys():
+  print(Day) #this will also print the keys of the dictionary, which are the days of the week, each on a new line 
+
+#This will print only the Values in My_Lunch dict: 
+for Food in My_Lunch.values():
+  print(Food) #this will print the values of the dictionary, which are the meals for each day, each on a new line 
+
+#Dict. Unpacking - This will print both the Keys and Values in My_Lunch dict: 
+for Day, Food in My_Lunch.items():
+  print(Day, Food) #this will print the keys and values of the dictionary in a formatted string, each on a new line 
+
+#OR 
+for Item in My_Lunch.items():
+  print(Item) #this will print the key-value pairs of the dictionary as tuples, each on a new line
+
+#Let's get a bit more creative with this using formatted strings: 
+for Day, Food in My_Lunch.items():
+  print(f'On {Day}, I eat {Food}.') #this will print the keys and values of the dictionary in a formatted string, each on a new line 
+
