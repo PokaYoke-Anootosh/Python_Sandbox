@@ -15,3 +15,15 @@ Encrypted_Password = '*' * len(User_Password)
 
 print(f'Hey {User_Name}, your password {Encrypted_Password} is {len(User_Password)} characters long \n and is successfully Encrypted! ')
 
+#For Loop Counter: 
+My_Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+Num_Count = 0 
+
+for num in my_Numbers:
+    Num_Count = Num_Count + 1 
+    print(f'The total number of numbers in the list is: {Num_Count}') 
+
+print(f'The total number of numbers in the list is: {Num_Count}') 
+
+

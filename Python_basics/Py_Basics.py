@@ -1108,7 +1108,17 @@ for i in [1,2,3]:
   for j in ['a','b','c']:
     print(i, j) #this will print the combination of numbers and letters, each on a new line 
 
-#Looping a Dictionary: 
+#Iterables in Python: 
+#An iterable is any Python object that can be looped over 
+# (iterated over) using a for loop. The following objects are 
+# considered iterables in Python: 
+#* Lists: [1, 2, 3], ['a', 'b', 'c'], etc.
+#* Tuples: (1, 2, 3), ('a', 'b', 'c'), etc.
+#* Sets: {1, 2, 3}, {'a', 'b', 'c'}, etc.
+#* Dictionaries: {'key1': 'value1', 'key2': 'value2'}, etc.
+#* Strings: 'Hello', "World", etc. 
+
+#Looping a Dictionary (Iterable):  
 My_Lunch = {
   'Sunday' : 'Biriyani',
   'Monday' : 'Daal Chawal',
@@ -1122,9 +1132,7 @@ My_Lunch = {
 #This will print only the Keys in My_Lunch dict:  
 for Day in My_Lunch:
   print(Day) #this will print the keys of the dictionary, which are the days of the week, each on a new line 
-
 #OR
-
 for Day in My_Lunch.keys():
   print(Day) #this will also print the keys of the dictionary, which are the days of the week, each on a new line 
 
@@ -1135,7 +1143,6 @@ for Food in My_Lunch.values():
 #Dict. Unpacking - This will print both the Keys and Values in My_Lunch dict: 
 for Day, Food in My_Lunch.items():
   print(Day, Food) #this will print the keys and values of the dictionary in a formatted string, each on a new line 
-
 #OR 
 for Item in My_Lunch.items():
   print(Item) #this will print the key-value pairs of the dictionary as tuples, each on a new line
@@ -1144,3 +1151,13 @@ for Item in My_Lunch.items():
 for Day, Food in My_Lunch.items():
   print(f'On {Day}, I eat {Food}.') #this will print the keys and values of the dictionary in a formatted string, each on a new line 
 
+#For Loop Counter: 
+My_Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+Num_Count = 0 
+
+for num in My_Numbers:
+    Num_Count = Num_Count + num #this will add each number in the list to the Num_Count variable, which will give us the total sum of the numbers in the list 
+    print(f'The total number of numbers in the list is: {Num_Count}') 
+
+print(f'The total number of numbers in the list is: {Num_Count}') 
