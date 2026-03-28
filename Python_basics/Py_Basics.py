@@ -1151,13 +1151,44 @@ for Item in My_Lunch.items():
 for Day, Food in My_Lunch.items():
   print(f'On {Day}, I eat {Food}.') #this will print the keys and values of the dictionary in a formatted string, each on a new line 
 
-#For Loop Counter: 
+#For Loop Counter (Indentation matters):  
 My_Numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
 
 Num_Count = 0 
 
+#Num_Count gets looped over and prints Total for each of the numbers in the My_Numbers list: 
 for num in My_Numbers:
     Num_Count = Num_Count + num #this will add each number in the list to the Num_Count variable, which will give us the total sum of the numbers in the list 
     print(f'The total number of numbers in the list is: {Num_Count}') 
 
+#Vs. Here outside the For loop Num_Count prints the final Total of all numbers in My_Numbers list once: 
 print(f'The total number of numbers in the list is: {Num_Count}') 
+
+#Range() function in For Loops: 
+
+print(range(20)) #returns range(0, 20) which is a range object that represents the sequence of numbers from 0 to 19 
+
+for i in range(20): 
+  print(i) #this will print the numbers from 0 to 19, each on a new line
+#OR 
+for _ in range(20): 
+  print(_) #this will also print the numbers from 0 to 19, each on a new line, but using _ as the variable name instead of i 
+
+#Stepover in range() function:
+for _ in range(0,20,5): 
+  print(_) #this will print the numbers from 0 to 19 with a step of 5, which means it will print 0, 5, 10, and 15, each on a new line 
+
+#For Reverse:
+for _ in range(20, 0, -5): 
+  print(_) #this will print the numbers from 20 to 1 with a step of -5, which means it will print 20, 15, 10, and 5, each on a new line 
+
+#Converting Range to List: 
+for _ in list(range(0, 20, 2)):
+  print(_) #this will print the numbers from 0 to 19 with a step of 2, which means it will print 0, 2, 4, 6, 8, 10, 12, 14, 16, and 18, each on a new line 
+
+#Enumerate: 
+for _ in enumerate(list(range(1,20))): #Enumerate returns the range values from 1 to 20 but with an index/serial number for each of the values...it Enumerates teh values 
+  print(_) 
+
+for c, val in enumerate(range(1,20)):
+  print(c,val)
