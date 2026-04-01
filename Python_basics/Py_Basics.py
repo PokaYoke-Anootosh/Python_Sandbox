@@ -1190,5 +1190,21 @@ for _ in list(range(0, 20, 2)):
 for _ in enumerate(list(range(1,20))): #Enumerate returns the range values from 1 to 20 but with an index/serial number for each of the values...it Enumerates teh values 
   print(_) 
 
-for c, val in enumerate(range(1,20)):
+for c, val in enumerate(range(1,20)): #Returns the same results as above just not in a Tuple form i.e. without the brackets 
   print(c,val)
+
+#While Loops: 
+Counter = 0
+
+while Counter < 10: 
+  print(Counter) #this will print the value of Counter, which starts at 0, and will keep printing until Counter is no longer less than 10
+  Counter = Counter + 1 #this will increment the value of Counter by 1 in each iteration of the loop, which will eventually make Counter equal to 10 and stop the loop from executing further 
+
+C = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+while val in C > 5: 
+  print(C.reverse()) #this will not print anything because the condition C < 10 is False from the start, so the loop will not execute at all 
+  break #this will break the loop if the condition is True, but since the condition is False, this line will not be executed at all 
+else:
+  print('Loop has ended: No Values > 5 in list C !') #this will be executed if the loop ends without encountering a break statement, which means the condition was False and the loop was not executed at all, so it will print 'Loop has ended!' 
+
