@@ -1208,3 +1208,41 @@ while val in C > 5:
 else:
   print('Loop has ended: No Values > 5 in list C !') #this will be executed if the loop ends without encountering a break statement, which means the condition was False and the loop was not executed at all, so it will print 'Loop has ended!' 
 
+#Use cases of For Loops:
+#1. Iterating over a list of items and performing an action on each item
+#2. Iterating over a range of numbers and performing an action for each number
+#3. Iterating over a dictionary and performing an action for each key-value pair 
+
+#Use cases of While Loops:
+#1. When you want to repeat a block of code until a certain condition is met
+#2. When you want to create an infinite loop that runs until a break statement is encountered
+
+#For loop vs While loop:
+#1. A for loop is generally used when you know the number of iterations in advance,
+# while a while loop is used when you want to repeat a block of code until a certain condition is met, and you may not know the number of iterations in advance.
+#2. A for loop is more concise and easier to read when iterating over a sequence of items, while a while loop can be more flexible and powerful when you need to perform complex logic
+#3. A for loop is generally faster than a while loop because it is optimized for iterating over a sequence of items, while a while loop may require more overhead to check the condition and manage the loop state.
+
+for i in range(5):
+  print(i) #this will print the numbers from 0 to 4, each on a new line 
+
+while i < 5:
+  print(i) #this will print the value of i, which starts at 4 (from the previous for loop), and will keep printing until i is no longer less than 5, which means it will only print 4 once and then stop because i will be incremented to 5 in the next line 
+  i = i + 1 #this will increment the value of i by 1 in each iteration of the loop, which will eventually make i equal to 5 and stop the loop from executing further 
+
+#while True:
+#  print('This is an infinite loop!') #this will print 'This is an infinite loop!' indefinitely because the condition for the while loop is always True, so it will never stop executing unless we manually break the loop or stop the program
+
+while True:
+  input('Enter something before Loop breaks: ') 
+  break #this will break the loop (irrespective of whether use enters a value or not)
+
+while True:
+  user_input = input('Enter Something to Stop the Loop: ') 
+  if user_input: #this will check if the user has entered something (i.e., if the input is not empty), if it is True, it will break the loop, otherwise it will continue to prompt the user for input
+    break
+
+while True:
+  user_input = input('Continue Writing anything. Say Bye to End: ') 
+  if user_input.lower() == 'bye': #this will check if the user has entered 'stop' (case-insensitive), if it is True, it will break the loop, otherwise it will continue to prompt the user for input
+    break
