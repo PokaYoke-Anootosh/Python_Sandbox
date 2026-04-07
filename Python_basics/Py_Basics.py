@@ -1246,3 +1246,47 @@ while True:
   user_input = input('Continue Writing anything. Say Bye to End: ') 
   if user_input.lower() == 'bye': #this will check if the user has entered 'stop' (case-insensitive), if it is True, it will break the loop, otherwise it will continue to prompt the user for input
     break
+
+#Break, Continue and Pass Statements:
+
+#Break Statement - The break statement is used to exit a loop prematurely when a certain condition is
+#met. When the break statement is executed, the loop is immediately terminated, and the program continues with the next statement after the loop.
+while True:
+  user_input = input('Enter Something to Stop the Loop: ') 
+  if user_input: #this will check if the user has entered something (i.e., if the input is not empty), if it is True, it will break the loop, otherwise it will continue to prompt the user for input
+    break
+
+for i in range(10):
+  if i == 5: 
+    break #this will break the loop when i is equal to 5, so it will only print the numbers from 0 to 4, and then stop because of the break statement
+
+
+#Continue Statement - The continue statement is used to skip the current iteration of a loop and move on to the next iteration. When the continue statement is executed, the rest of the code inside the loop for that iteration is skipped, and the loop continues with the next iteration.
+while True:
+  user_input = input('Enter Something to Continue the Loop: ') 
+  if user_input: #this will check if the user has entered something (i.e., if the input is not empty), if it is True, it will skip the rest of the code inside the loop for that iteration and continue to prompt the user for input, otherwise it will break the loop
+    continue
+  else:
+    break
+
+for i in range(10):
+  if i == 5: 
+    continue #this will skip the rest of the code inside the loop when i is equal to 5, so it will print the numbers from 0 to 9 except for 5, which will be skipped because of the continue statement
+  print(i) #this will print the value of i for each iteration of the loop, except for when i is equal to 5, which will be skipped because of the continue statement 
+
+
+#Pass Statement - The pass statement is a null statement that does nothing. It is used as a placeholder in situations where a statement is syntactically required but no action is needed. When the pass statement is executed, it simply does nothing and the program continues with the next statement. 
+while True:
+  user_input = input('Enter Something to Skip the Loop: ') 
+  if user_input: #this will check if the user has entered something (i.e., if the input is not empty), if it is True, it will execute the pass statement, which does nothing, and then continue to prompt the user for input, otherwise it will break the loop
+    pass
+  else:
+    break
+
+for i in range(10):
+  if i == 5: 
+    pass #this will do nothing when i is equal to 5, so it will print the numbers from 0 to 9, including 5, because the pass statement does not affect the flow of the loop 
+
+print(i) #this will print the value of i for each iteration of the loop, including when i is equal to 5, because the pass statement does not affect the flow of the loop 
+
+
