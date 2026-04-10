@@ -1277,7 +1277,7 @@ for i in range(10):
 
 #Pass Statement - The pass statement is a null statement that does nothing. It is used as a placeholder in situations where a statement is syntactically required but no action is needed. When the pass statement is executed, it simply does nothing and the program continues with the next statement. 
 while True:
-  user_input = input('Enter Something to Skip the Loop: ') 
+  user_input = input('Enter Something to Continue the Loop: ') 
   if user_input: #this will check if the user has entered something (i.e., if the input is not empty), if it is True, it will execute the pass statement, which does nothing, and then continue to prompt the user for input, otherwise it will break the loop
     pass
   else:

@@ -23,13 +23,27 @@ picture = [
   [0,0,0,1,0,0,0]
 ]
 
-#Solution:
-for line in picture:
-  for digit in line:
-    if digit == 0:
-      print(' ', end=' ')
-    else:
-      print('*', end=' ')
-  print(' ') #This prints a new line after each row of the picture
-print('Merry Christmas!') #This prints a message at the end of the picture
+for L1st in picture:
+    for Val in L1st:
+        if Val == 0:
+            print('', end=' ')
+        else:
+            print(1, end=' ')
+    print('') #This takes the cursor to the next line by default after each row of the picture is printed.
+
+#OR with  a Star instead of 1:
+
+for L1st in picture:
+    for Val in L1st:
+        if Val == 1:
+            print('*', end=' ')
+        else:
+            print('', end=' ')
+    print('') #This takes the cursor to the next line by default after each row of the picture is printed.
+
+
+
+
+
+
 
