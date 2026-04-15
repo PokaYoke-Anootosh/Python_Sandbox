@@ -1290,3 +1290,16 @@ for i in range(10):
 print(i) #this will print the value of i for each iteration of the loop, including when i is equal to 5, because the pass statement does not affect the flow of the loop 
 
 
+#Finding Duplicates with For Loop: 
+some_list = [1, 2, 3, 4, 5, 1, 2, 3]
+
+duplicates = []
+for item in some_list:
+  if some_list.count(item) > 1:
+    if item not in duplicates: #this will check if the item is not already in the duplicates list, if it is not, it will append the item to the duplicates list, otherwise it will skip it to avoid adding duplicate items to the duplicates list
+     duplicates.append(item) #this will check if the count of the item in the list is greater than 1, which means it is a duplicate, and if it is True, it will append the item to the duplicates list 
+else:
+  print(duplicates)
+
+
+
