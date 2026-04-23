@@ -1301,5 +1301,23 @@ for item in some_list:
 else:
   print(duplicates)
 
+#Python Functions:
+#Functions are reusable blocks of code that perform a specific task. 
+# They allow you to break down your code into smaller, more manageable 
+# pieces, and they can be called multiple times throughout your program. 
+# Functions can take input in the form of parameters and can return 
+# output using the return statement.
+
+def Greet_Elon(): #This is where we Define a function named Greet_Elon, which takes no parameters and does not return anything
+  print('Hello Alien \99/ Welcome to Mars') #This is the body of the function, which will be executed when the function is called. In this case, it will print a greeting message to Elon Musk. 
+
+Greet_Elon() #This is where we Call the function Greet_Elon 
+
+print(Greet_Elon) #When we print the function name without parentheses, it will return the function object itself, which is a reference to the function in memory. It will not execute the function, but instead it will show us that Greet_Elon is a function object.
+
+
+
+
+
 
 
