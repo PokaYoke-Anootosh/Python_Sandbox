@@ -1308,6 +1308,11 @@ else:
 # Functions can take input in the form of parameters and can return 
 # output using the return statement.
 
+#Pro-Tip: Functions help make your Code DRY i.e. Don\'t Repeat Yourself, 
+# which means you can write a piece of code once and reuse it multiple 
+# times without having to rewrite the same code again and again, 
+# which makes your code more efficient and easier to maintain. 
+
 def Greet_Elon(): #This is where we Define a function named Greet_Elon, which takes no parameters and does not return anything
   print('Hello Alien \99/ Welcome to Mars') #This is the body of the function, which will be executed when the function is called. In this case, it will print a greeting message to Elon Musk. 
 
@@ -1315,6 +1320,24 @@ Greet_Elon() #This is where we Call the function Greet_Elon
 
 print(Greet_Elon) #When we print the function name without parentheses, it will return the function object itself, which is a reference to the function in memory. It will not execute the function, but instead it will show us that Greet_Elon is a function object.
 
+#Parameters & Arguments ini Functions:
+
+#Parameters are the variables that are defined in the function 
+# definition and are used to receive input when
+
+#Arguments are the actual values that are passed to the function 
+# when it is called.
+
+#So, think of them as Questions and Anwers. Parameters are the 
+# Questions that the function asks for when it is defined, 
+# and Arguments are the Answers that a user of the function provides 
+# to those Questions when they call/use that function. 
+
+def Greeting_Message(Name_of_Person, Welcome_Message): #This is where we Define a function named Greet_Elon, which takes three parameters: Name_of_Person, Welcome_Message, and a formatted string that combines both parameters to create a greeting message. 
+  print(f'Hey there, {Name_of_Person}, {Welcome_Message}!') #This is the body of the function, which will be executed when the function is called. In this case, it will print a greeting message that includes the Name_of_Person and Welcome_Message provided as arguments when the function is called.
+
+print(Greeting_Message) #When we print the function name without parentheses, it will return the function object itself, which is a reference to the function in memory. It will not execute the function, but instead it will show us that Greeting_Message is a function object.
+print(Greeting_Message('Elon the Alien','Welcome to Mars')) #This is where we Call the function Greeting_Message and pass the arguments 'Elon the Alien' and 'Welcome to Mars' to the parameters Name_of_Person and Welcome_Message respectively. This will execute the function and print the greeting message with the provided arguments.
 
 
 
