@@ -1337,9 +1337,78 @@ def Greeting_Message(Name_of_Person, Welcome_Message): #This is where we Define 
   print(f'Hey there, {Name_of_Person}, {Welcome_Message}!') #This is the body of the function, which will be executed when the function is called. In this case, it will print a greeting message that includes the Name_of_Person and Welcome_Message provided as arguments when the function is called.
 
 print(Greeting_Message) #When we print the function name without parentheses, it will return the function object itself, which is a reference to the function in memory. It will not execute the function, but instead it will show us that Greeting_Message is a function object.
-print(Greeting_Message('Elon the Alien','Welcome to Mars')) #This is where we Call the function Greeting_Message and pass the arguments 'Elon the Alien' and 'Welcome to Mars' to the parameters Name_of_Person and Welcome_Message respectively. This will execute the function and print the greeting message with the provided arguments.
+Greeting_Message('Elon the Alien','Welcome to Mars') #This is where we Call the function Greeting_Message and pass the arguments 'Elon the Alien' and 'Welcome to Mars' to the parameters Name_of_Person and Welcome_Message respectively. This will execute the function and print the greeting message with the provided arguments.
+
+#Positioal Arguments &Keyword ARguments in Functions:
+
+#Positional Arguments:
+# Arguments that are passed to a function in the correct order, 
+# which matches the order of the parameters defined in the function.
+
+#For Eg.:
+Greeting_Message('Trump the Taco','Welcome to Iran') 
+# Here the first argument 'Trump the Taco' is passed to the first 
+# parameter Name_of_Person, and the second argument 
+# 'Welcome to Iran' is passed to the second parameter Welcome_Message.
+# The order of the arguments matters in this case, and if we were 
+# to switch the order of the arguments, it would lead to a different 
+# output.
+
+Greeting_Message('Welcome to Iran', 'Trump the Taco') 
+# Here the first argument 'Welcome to Iran' is passed to the first 
+# parameter Name_of_Person, and the second argument 'Trump the Taco'
+# is passed to the second parameter Welcome_Message, which will lead
+# to a different output than the previous example because the order 
+# of the arguments has been switched.
 
 
+#Keyword Arguments:
+# Arguments that are passed to a function with the name of the 
+# parameter they are being passed to, which allows you to pass the 
+# arguments in any order, as long as you specify the parameter name 
+# for each argument.
+
+#For Eg.:
+Greeting_Message(Name_of_Person='Trump the Taco', Welcome_Message='Welcome to Iran')
+# Here we are using keyword arguments to pass the values to the 
+# parameters. We specify the parameter name for each argument, 
+# which allows us to pass the arguments in any order. 
+# In this case, we are passing 'Trump the Taco' to the parameter 
+# Name_of_Person and 'Welcome to Iran' to the parameter 
+# Welcome_Message, which will produce the same output as the 
+# previous example, even though the order of the arguments 
+# is different.
+
+Greeting_Message(Welcome_Message='Welcome to Iran', Name_of_Person='Trump the Taco')
+# Here we are again using keyword arguments to pass the values to
+# the parameters, but this time we are switching the order of the
+# arguments. We specify the parameter name for each argument, which
+# allows us to pass the arguments in any order. In this case, we are
+# passing 'Welcome to Iran' to the parameter Welcome_Message 
+# and 'Trump the Taco' to the parameter Name_of_Person, which will 
+# produce the same output as the previous examples, even though the 
+# order of the arguments is different.
+
+#Default Arguments in Functions:
+#Default arguments are parameters that have a default value 
+# assigned to them in the function definition. If a value for a 
+# default argument is not provided when the function is called, 
+# the default value will be used instead.
+
+def Greeting_Message(Name_of_Person='Stranger', Welcome_Message='Welcome to the World'): 
+  print(f'Hey there, {Name_of_Person}, {Welcome_Message}!')
+# Here we have defined default values for the parameters Name_of_Person
+# and Welcome_Message. If we call the function without providing
+# any arguments, it will use the default values and print 'Hey there, 
+# Stranger, Welcome to the World!' 
+
+Greeting_Message('Elon the Alien', 'Welcome to Mars')
+# Here we are providing values for both parameters, so it will use the
+# provided values and print 'Hey there, Elon the Alien, Welcome to Mars!'
+
+Greeting_Message()
+# Here we are not providing any arguments, so it will use the default
+# values and print 'Hey there, Stranger, Welcome to the World!'
 
 
 
