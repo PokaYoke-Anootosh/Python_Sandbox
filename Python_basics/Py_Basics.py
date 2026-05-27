@@ -1410,6 +1410,23 @@ Greeting_Message()
 # Here we are not providing any arguments, so it will use the default
 # values and print 'Hey there, Stranger, Welcome to the World!'
 
+#RETURNING A VALUE FROM A FUNCTION:
+def SUM_IF_EVEN(num1, num2): #A function that sums up only Even numbers
+    if num1 % 2 == 0 and num2 % 2 == 0:
+      return num1 + num2
+    else:
+      return 'One of the numbers is not even!'
+
+SumNum = SUM_IF_EVEN(4,5)
+print(SumNum)
+
+#or simply...
+
+SUM_IF_EVEN(4,5) #this will return 'One of the numbers is not even!' because 5 is not an even number, so the else block will be executed and it will return the string 'One of the numbers is not even!'
+
+
+
+
 
 
 

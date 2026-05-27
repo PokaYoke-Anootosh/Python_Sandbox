@@ -42,8 +42,14 @@ for L1st in picture:
     print('') #This takes the cursor to the next line by default after each row of the picture is printed.
 
 
+#RETURNING A VALUE FROM A FUNCTION:
+def SUM_IF_EVEN(num1, num2):
+    if num1/2 == 0 and num2/2 == 0:
+        return num1 + num2
+    else:
+        print('One of the numbers is not even!')
 
-
-
+SumNum = sum_if_even(4,6)
+print(SumNum)
 
 
