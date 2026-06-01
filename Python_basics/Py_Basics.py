@@ -1424,6 +1424,26 @@ print(SumNum)
 
 SUM_IF_EVEN(4,5) #this will return 'One of the numbers is not even!' because 5 is not an even number, so the else block will be executed and it will return the string 'One of the numbers is not even!'
 
+#Docstrings in Functions:
+#Docstrings are a special type of string that is used to document
+# a function, class,
+
+def SUM_IF_EVEN(num1, num2):
+  
+  '''This function takes two numbers as input and returns 
+  their sum if both numbers are even. If either of the numbers 
+  is not even, it returns a message indicating that one of the 
+  numbers is not even.'''
+
+  if num1 % 2 == 0 and num2 % 2 == 0:
+    return num1 +num2
+  else:
+    return 'One of the numbers is not even!'
+  
+#Now this function will show show the documentation in the docstring 
+# as it asks for arguments:
+SUM_IF_EVEN(4,5) 
+
 
 
 
