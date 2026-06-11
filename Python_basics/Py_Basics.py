@@ -1442,11 +1442,38 @@ def SUM_IF_EVEN(num1, num2):
   
 #Now this function will show show the documentation in the docstring 
 # as it asks for arguments:
-SUM_IF_EVEN(4,5) 
+print(SUM_IF_EVEN(2,4)) #this will print the docstring of the function, which is the string that is enclosed in triple quotes right after the function definition. It provides a description of what the function does and how to use it. In this case, it will print the docstring that we defined for the SUM_IF_EVEN function.
 
+#*Args and **Kwargs:
+#*Args (Positional Arguments) allows a function to accept an 
+# arbitrary number of positional arguments, which are passed as 
+# a tuple to the function.
 
+def my_func(*args):
+  print(args)
+  return(sum(args))
 
+print(my_func(1,2,3,4)) #this will print the tuple (1, 2, 3, 4) which contains all the positional arguments passed to the function, and then it will return the sum of those arguments, which is 10 in this case.
 
+#The arguments can be named anything for eg.: 
+def Sum_this(*SumNums):
+  return(sum(SumNums))
 
+print(Sum_this(1,2,3,4)) 
 
+#**Kwargs (Keyword Arguments) allows a function to accept an 
+# arbitrary number of keyword arguments, which are passed as a 
+# dictionary to the function.
+
+def my_func(**kwargs):
+  print(kwargs)
+  return(sum(kwargs.values()))
+
+print(my_func(a=1, b=2, c=3, d=4)) #this will print the dictionary {'a': 1, 'b': 2, 'c': 3, 'd': 4} which contains all the keyword arguments passed to the function, and then it will return the sum of the values of those arguments, which is 10 in this case.
+
+#The Keyword arguments can also be named anything for eg.:
+def Sum_this(**SumNums):
+  return(sum(SumNums.values()))
+
+print(Sum_this(num1=1,num2=2,num3=3,num4=4)) #this will print the dictionary {'num1': 1, 'num2': 2, 'num3': 3, 'num4': 4} which contains all the keyword arguments passed to the function, and then it will return the sum of the values of those arguments, which is 10 in this case.
 
