@@ -1477,3 +1477,12 @@ def Sum_this(**SumNums):
 
 print(Sum_this(num1=1,num2=2,num3=3,num4=4)) #this will print the dictionary {'num1': 1, 'num2': 2, 'num3': 3, 'num4': 4} which contains all the keyword arguments passed to the function, and then it will return the sum of the values of those arguments, which is 10 in this case.
 
+#RETURNING A VALUE FROM A FUNCTION:
+def SUM_IF_EVEN(num1, num2):
+    if num1/2 == 0 and num2/2 == 0:
+        return num1 + num2
+    else:
+        print('One of the numbers is not even!')
+
+SumNum = SUM_IF_EVEN(4,6)
+print(SumNum)

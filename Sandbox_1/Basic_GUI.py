@@ -49,7 +49,7 @@ def SUM_IF_EVEN(num1, num2):
     else:
         print('One of the numbers is not even!')
 
-SumNum = sum_if_even(4,6)
+SumNum = SUM_IF_EVEN(4,6)
 print(SumNum)
 
 
