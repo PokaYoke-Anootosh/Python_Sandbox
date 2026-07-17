@@ -26,4 +26,27 @@ for num in my_Numbers:
 
 print(f'The total number of numbers in the list is: {Num_Count}') 
 
+#Scope of Variables:
+#Python has two types of variable scope: Local and Global.
+#For every variable defined in a function, it is local to that function.
+#For every variable defined outside of a function, it is global to the entire program. 
+#The order/rule in which Python checks for variables is: 
+# Local > Enclosing (i.e., Nested in a Parent function) > Global > Built-in functions 
+#So first, Python checks for a variable in the local scope, 
+# then in the enclosing scope, 
+# then in the global scope, 
+# and finally in the built-in functions 
+
+Action = 12 #This is a Global Variable
+
+def Take_Action():
+    Action = 10 #This becomes a Local Variable 
+    return Action 
+
+print(f'The value of the Global Variable Action is: {Action}')
+print(f'The value of the Local Variable Action is: {Take_Action()}') 
+
+
+
+
 

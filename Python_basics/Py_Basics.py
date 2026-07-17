@@ -1485,4 +1485,92 @@ def SUM_IF_EVEN(num1, num2):
         print('One of the numbers is not even!')
 
 SumNum = SUM_IF_EVEN(4,6)
-print(SumNum)
+print(SumNum) 
+
+#Scope of Variables:
+#Python has two types of variable scope: Local and Global.
+#For every variable defined in a function, it is local to that function.
+#For every variable defined outside of a function, it is global to the entire program. 
+#The order/rule in which Python checks for variables is: 
+# Local > Enclosing (i.e., Nested in a Parent function) > Global > Built-in functions 
+#So first, Python checks for a variable in the local scope, 
+# then in the enclosing scope, 
+# then in the global scope, 
+# and finally in the built-in functions 
+
+Action = 12 #This is a Global Variable
+
+def Take_Action():
+    Action = 10 #This becomes a Local Variable 
+    return Action 
+
+print(f'The value of the Global Variable Action is: {Action}') 
+print(f'The value of the Local Variable Action is: {Take_Action()}') 
+
+
+def Task():
+  Action = 15 #This becomes a Enclosing/Nested Variable 
+  def Take_Action(): 
+    return Action 
+  return Take_Action() 
+
+print(f'The value of the Global Variable Action is: {Action}') 
+print(f'The value of the Enclosing/Nested Variable Action is: {Task()}')  
+
+#With  Nested and Local Variables: 
+def Task():
+  Action = 15 #This becomes a Enclosing/Nested Variable 
+  def Take_Action(): 
+    Action = 20 #This becomes a Local Variable 
+    return Action 
+  return Take_Action()
+
+print(f'The value of the Global Variable Action is: {Action}')
+print(f'The value of the Enclosing/Nested Variable Action is: {Task()}')
+
+print(Action) #This will print the value of the Global Variable Action, which is 12, 
+# because the Local Variable Action defined inside the Take_Action 
+# function does not affect the value of the Global Variable Action. 
+
+#The Global Keyword (to use a Global Variable inside a function): 
+Action = 14 #This is a Global Variable 
+
+def Take_Action():
+    global Action #This tells Python that we want to use the Global Variable Action inside this function, instead of creating a new Local Variable with the same name. 
+    Action += 1 #Incrementinig the value of Action by 1
+    return Action 
+
+print(Take_Action()) #This will print the value of the Global Variable Action after it has been incremented by 1, which is 15
+
+Take_Action() #This will increment the value of Action by 1 again, so now Action = 15 (Starts from the original value of the Global Varaible) 
+Take_Action() #This will increment the value of Action by 1 again, so now Action = 16
+print(Action) #This will increment the value of Action by 1 again and then print the final Value of Action = 17 
+
+#In the  above method, the value of the variable 'Action' changes because we are 
+# using the Global Keyword to access the Global Variable Action inside the function
+# Take_Action.
+
+#We can the Global variable as a Parameter instead of using the Global Keyword
+#but in that case, the value of the Variable/parameter will keep resetting to the  
+#actual value of the Global Variable which in the previous line became 17:    
+def Take_Action(Action): 
+    Action += 1
+    return Action 
+
+Take_Action(Action) #Value of Action resets to 17 and then increments by 1
+Take_Action(Action) #Value of Action again resets to 17 and then increments by 1
+print(Take_Action(Action)) #This will increment the value of Action by 1 again and then print the final Value of Action = 18
+
+#So in the above method, the value of the variable 'Action' does not change 
+#Hence, we can use print to call the function multiple times to be able to get 
+# an accumulated/updated value of the Global Variable using it as a Paremmeter: 
+
+print(Take_Action(Take_Action(Take_Action(Action)))) #This will increment the value of Action by 1 three times and then print the final Value of Action = 20
+
+# Note: The actual value of teh Global Varaible is still unchanged this way. 
+
+
+
+
+
+
