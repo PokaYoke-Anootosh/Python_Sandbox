@@ -80,7 +80,7 @@
 #print(bonus) 
 
 #Lists 
-from ast import Return
+from ast import List, Return
 from typing import Counter
 
 from sympy import false
@@ -1607,32 +1607,60 @@ print(OuterFx()) #This prints the value of the Local Variable of the Child Funct
 # outside of the function). 
 
 def Pure_Fx(Pure_Val):
-  Pure_Val * 2  
+  Pure_Val = Pure_Val * 2
   return Pure_Val
+
+#Or simply: 
+
+def Pure_Fx(Pure_Val):
+  return Pure_Val * 2
 
 #This above function is a Pure function because it returns the same output for 
 # the same input and does not modify any external state or variable outside of 
 # the function.
 #So: 
 
-print(Pure_Fx(10)) #Returns 20 every time we input 10 as the argument for the function Pure_Fx.
-
+print(Pure_Fx(10)) 
+#Returns 20 every time we input 10 as the argument for the function Pure_Fx, and 
+# we have to print it externally to actually see the output. 
 
 #But look at the below function:
 
-def Pure_Fx(Val):
+def Not_Pure_Fx(Val):
   if Val > 2:
     Val = Val * Val
   else:
-    Val = Val * 1
+    Val = Val * 2
   return print(Val)
 
 #This above function is not a Pure function because it does not always return 
 # the same output for the same input. For example, if we input 10 as the argument 
-# for the function Pure_Fx, it will return 100, but if we input 1 as the argument,
+# for the function Not_Pure_Fx, it will return 100, but if we input 1 as the argument,
 # it will return 1. Also, it modifies the external state of the variable Val, by 
 # printing it to the console, which is not allowed in a Pure function.
 #So: 
 
-Pure_Fx(10)
+Not_Pure_Fx(10)
+#Returns a different value for every arugument we input as 'Val' and also this 
+# function now prints the returned value by itself therefore changing the external 
+# state of the variable Val. 
+
+#Map function:
+#The map() function applies a given function to each item of an iterable (e.g.,
+# list, tuple) and returns a map object (which is an iterator) containing the results
+#The syntax of the map() function is: map(function, iterable)
+
+Pure_List = [1, 2, 3, 4, 5] 
+
+#This will apply the Pure_Fx function to each item of the Pure_List and return a 
+# map object containing the results, which is then converted to a list and 
+# printed to the console. The output will be [2, 4, 6, 8, 10] because the 
+# Pure_Fx function multiplies each item by 2.
+print(list(map(Pure_Fx, Pure_List))) 
+
+#This will print the original Pure_List, which is [1, 2, 3, 4, 5], because the 
+# map() function does not modify the original iterable.
+print(Pure_List)
+
+
 
