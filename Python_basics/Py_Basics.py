@@ -80,6 +80,7 @@
 #print(bonus) 
 
 #Lists 
+from ast import Return
 from typing import Counter
 
 from sympy import false
@@ -1546,9 +1547,9 @@ Take_Action() #This will increment the value of Action by 1 again, so now Action
 Take_Action() #This will increment the value of Action by 1 again, so now Action = 16
 print(Action) #This will increment the value of Action by 1 again and then print the final Value of Action = 17 
 
-#In the  above method, the value of the variable 'Action' changes because we are 
-# using the Global Keyword to access the Global Variable Action inside the function
-# Take_Action.
+#In the  above method, the value of the variable 'Action' is permanently altered 
+# and becomes 17, because we are using the Global Keyword to access the Global 
+# Variable Action inside the function Take_Action.
 
 #We can the Global variable as a Parameter instead of using the Global Keyword
 #but in that case, the value of the Variable/parameter will keep resetting to the  
@@ -1562,15 +1563,76 @@ Take_Action(Action) #Value of Action again resets to 17 and then increments by 1
 print(Take_Action(Action)) #This will increment the value of Action by 1 again and then print the final Value of Action = 18
 
 #So in the above method, the value of the variable 'Action' does not change 
-#Hence, we can use print to call the function multiple times to be able to get 
-# an accumulated/updated value of the Global Variable using it as a Paremmeter: 
+#Hence, we can use print to call the function multiple times by nesting 
+#each of them within one another to be able to get an incremented/updated value 
+#of the Global Variable using it as a Paremmeter: 
 
-print(Take_Action(Take_Action(Take_Action(Action)))) #This will increment the value of Action by 1 three times and then print the final Value of Action = 20
+print(Take_Action(Take_Action(Take_Action(Action)))) #This will increment the value of Action (17) by 1 three times and then print the final Value of Action = 20
 
-# Note: The actual value of teh Global Varaible is still unchanged this way. 
+# Note: The actual value of the Global Varaible is still unchanged this way. 
+
+#NonLocal keyword (to use a NonLocal Variable inside a function):
+def OuterFx():
+  globx='I am a Local Variable (of the Parent Function)' 
+  def InnerFx():
+    nonlocal globx #This now refers to the Local Variable of the Parent fx
+    globx='I am a Local Variable (of the Child Function)' 
+    return globx
+  return InnerFx()
+
+print(OuterFx()) #This prints the value of the Local Variable of the Child Function, which is 'I am a Local Variable (of the Child Function)', because we are using the NonLocal Keyword to access the Local Variable of the Parent Function inside the InnerFx function, and then we are reassigning it to a new value.
+
+#This below function will return a non-binding error because we are trying to 
+# use the NonLocal Keyword to access a Global Variable, which is not allowed in 
+# Python. The NonLocal Keyword can only be used to access variables that are 
+# defined in an enclosing function, not global variables.
+
+#globx = 'I am a Global Variable' 
+#def OuterFx():
+#  global globx #This becomes a NonLocal Variable
+#  globx = 'I am a NonLocal Variable' 
+#  def InnerFx():
+#    nonlocal globx #This tells Python that we want to use the NonLocal Variable globx inside this function, instead of creating a new Local Variable with the same name. 
+#    globx = 'I am a Local Variable' #This becomes a Local Variable 
+#    return globx 
+#  return InnerFx()
+
+#print(OuterFx()) 
 
 
+#Pure Functions: 
+#A pure function is a function that always: 
+#1. Returns the same output for the same input, and
+#2. Has no side effects (i.e., it does not modify any external state or variable 
+# outside of the function). 
+
+def Pure_Fx(Pure_Val):
+  Pure_Val * 2  
+  return Pure_Val
+
+#This above function is a Pure function because it returns the same output for 
+# the same input and does not modify any external state or variable outside of 
+# the function.
+#So: 
+
+print(Pure_Fx(10)) #Returns 20 every time we input 10 as the argument for the function Pure_Fx.
 
 
+#But look at the below function:
 
+def Pure_Fx(Val):
+  if Val > 2:
+    Val = Val * Val
+  else:
+    Val = Val * 1
+  return print(Val)
+
+#This above function is not a Pure function because it does not always return 
+# the same output for the same input. For example, if we input 10 as the argument 
+# for the function Pure_Fx, it will return 100, but if we input 1 as the argument,
+# it will return 1. Also, it modifies the external state of the variable Val, by 
+# printing it to the console, which is not allowed in a Pure function.
+#So: 
+
+Pure_Fx(10)
 
