@@ -1652,15 +1652,38 @@ Not_Pure_Fx(10)
 
 Pure_List = [1, 2, 3, 4, 5] 
 
-#This will apply the Pure_Fx function to each item of the Pure_List and return a 
-# map object containing the results, which is then converted to a list and 
-# printed to the console. The output will be [2, 4, 6, 8, 10] because the 
-# Pure_Fx function multiplies each item by 2.
+#This will apply the Pure_Fx function to each item of the Pure_List and 
+# return a map object containing the results, which is then converted to a 
+# list and printed to the console. The output will be [2, 4, 6, 8, 10] 
+# because the Pure_Fx function multiplies each item by 2. 
+
 print(list(map(Pure_Fx, Pure_List))) 
 
 #This will print the original Pure_List, which is [1, 2, 3, 4, 5], because the 
 # map() function does not modify the original iterable.
 print(Pure_List)
 
+#Filter function:
+#The filter() function looks for function that returns a Boolean type 
+# (True/False) value. 
+#filter() does NOT require a pure function, nor does it care how 
+# complex your function is.
+# It only cares about one thing: The function MUST return a 
+# boolean-like decision (True or False) for a single item.
 
+def Only_Odd(num):
+  return num % 2 != 0 #this function returns TRUE if number is odd i.e. if the num divided  by 2 does not return a Zero, and FALSE if number is Even. 
+
+print(list(filter(Only_Odd, Pure_List))) #So filter keeps only TRUE values i.e numbers that if divided by 2 will return a Zero.
+print(Pure_List) #Here the original Pure_List is returned because filter does not modify the original list 
+
+#Other Real-World Examples of using filter(): 
+
+#Filtering for words that start with a certain alphabet -
+Dog_Breeds = ["Beagle", "Bulldog", "Boxer", "Chihuahua", "Dachshund"]
+
+def Name_Starts_With(Word):
+  return Word.upper().startswith("B")
+
+print(list(filter(Name_Starts_With, Dog_Breeds))) #this will print the list of dog breeds that start with the letter "B", which is ['Beagle', 'Bulldog', 'Boxer']
 
