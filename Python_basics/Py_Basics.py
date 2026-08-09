@@ -1710,6 +1710,25 @@ print(list(zip(Pure_List, Dog_Breeds, ['Rank1', 'Rank3', 'Rank4', 'Rank2', 'Rank
 # , (5, 'Dachshund', 'Rank5')], which is a list of tuples where each tuple contains a number 
 # from Pure_List, a dog breed from Dog_Breeds, and a rank from the third iterable. 
 
+#Reduce function:
+#The reduce() function is a higher-order function that takes a function and an iterable as input
+# and applies the function cumulatively to the items of the iterable, reducing the iterable to 
+# a single value. The reduce() function is part of the functools module, so you need to import it: 
+from functools import reduce 
+
+def accumulate_sum(Num_Val, Sum_Val):
+  print(Num_Val, Sum_Val)
+  return Num_Val + Sum_Val
+
+print(reduce(accumulate_sum, Pure_List, 0))
+
+#this will print the original Pure_List, which is [1, 2, 3, 4, 5], because the reduce() 
+# function does not modify the original iterable.
+print(Pure_List) 
+
+
+
+
 
 
 
