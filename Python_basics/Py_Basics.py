@@ -1687,3 +1687,29 @@ def Name_Starts_With(Word):
 
 print(list(filter(Name_Starts_With, Dog_Breeds))) #this will print the list of dog breeds that start with the letter "B", which is ['Beagle', 'Bulldog', 'Boxer']
 
+#Zip function: 
+#The zip() function takes two or more iterables (e.g., lists, tuples) and
+# returns an iterator that aggregates elements from each iterable. 
+# The values from the iterables are paired together based on their position in the iterable,
+#The syntax of the zip() function is: zip(iterable1, iterable2, ...
+#The zip() function stops when the shortest input iterable is exhausted.  
+
+print(list(zip(Pure_List, Dog_Breeds))) 
+#this returns a list of tuples where each tuple contains one element from each of the input 
+# iterables, paired together based on their position in the iterable. The output will be 
+# [(1, 'Beagle'), (2, 'Bulldog'), (3, 'Boxer'), (4, 'Chihuahua'), (5, 'Dachshund')], which is a 
+# list of tuples where each tuple contains a number from Pure_List and a dog breed from Dog_Breeds. 
+
+#We can add more than 2 iterables (lists, tuples, etc.) to the zip() function, and it will pair 
+# them together based on their position in the iterable. Take a look at the below example: 
+
+print(list(zip(Pure_List, Dog_Breeds, ['Rank1', 'Rank3', 'Rank4', 'Rank2', 'Rank5'])))
+#this returns a list of tuples where each tuple contains one element from each of the input
+# iterables, paired together based on their position in the iterable. The output will be
+# [(1, 'Beagle', 'Rank1'), (2, 'Bulldog ', 'Rank3'), (3, 'Boxer', 'Rank4'), (4, 'Chihuahua', 'Rank2')
+# , (5, 'Dachshund', 'Rank5')], which is a list of tuples where each tuple contains a number 
+# from Pure_List, a dog breed from Dog_Breeds, and a rank from the third iterable. 
+
+
+
+
