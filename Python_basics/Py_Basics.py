@@ -1727,8 +1727,105 @@ print(reduce(accumulate_sum, Pure_List, 0))
 print(Pure_List) 
 
 
+#Comprehensions in Python - 
+#Comprehensions are a concise way to create lists, dictionaries, and 
+# sets in Python.
+
+#List Comprehensions: 
+#List Comprehensions provide a concise way to create lists in Python.
+#The format stands as: 
+# [PARAMETER for PARAMETER in ITERABLE if CONDITION] 
+# For eg., 
+# We can write the below function for a List in a shorter/one line form: 
+
+New_Random_List = [] 
+
+for n in [15,15,16,2]:
+  New_Random_List.append(n)
+  print(New_Random_List)
+
+#The shorter one-line form for the above fucbtion using List Comprehension is:
+New_Random_List = [n for n in [15,15,16,2]]
+print(New_Random_List) 
+
+#OR using a range function: 
+
+New_Randomm_List = [r for r in range(14,20)]
+print(New_Randomm_List) #this will print the list of numbers from 14 to 19, which is [14, 15, 16, 17, 18, 19], because the range() function generates a sequence of numbers from the start value (14) to the end value (20), but does not include the end value itself.
+
+#OR using any of the mathematical operators like +,-,*,/, etc.: 
+New_Random_List = [r*4 for r in range(14,20)]
+print(New_Random_List)
+
+#And Finally using an If condition (in this case we use an if to 
+# filter for Even numbers i.e. numbers that return 0 if divided by 2):
+New_Random_List = [r*2 for r in range(14,20) if r % 2 == 0]
+#This shall return only Even numbers from the range of 56 to 76 i.e.
+# every number in the range(14,20) multiplied by 2, and filter out
+# any odd numbers produced by the multiplication within that range:  
+print(New_Random_List) 
 
 
+#Dictionary Comprehensions:
+#Dictionary Comprehensions provide a concise way to create 
+# dictionaries in Python. 
+
+My_Football_Team = {
+  'Messi' : 'Midfield',
+  'Ronaldo' : 'Forward',
+  'Neymar' : 'Forward',
+  'Mbappe' : 'Forward',
+  'Modric' : 'Midfield',
+  'Rivaldo' : 'Midfield',
+  'Kante' : 'Midfield',
+  'Pique' : 'Defence',
+  'Ramos' : 'Defence',
+  'Yamal' : 'Defence',
+  'Kahn' : 'Goalkeeper',
+  'Vozinha' : 'Goalkeeper'
+}
+
+#Here we use the same syntax for Comprehensions but for 
+# Dictionaries instead of Lists i.e. we use curly braces {} 
+# instead of square brackets [] and we use a colon : to separate 
+# the key and value pairs instead of a comma ',' : 
+
+My_Team_Forwards = {Key : Val for Key, Val in My_Football_Team.items() if Val == 'Forward'}
+print(My_Team_Forwards) 
+
+My_Team_Midfielders = {Key : Val for Key, Val in My_Football_Team.items() if Val == 'Midfield'}
+print(My_Team_Midfielders)
+
+#Creating dict from Lists using Commprehensions: 
+
+#from a lit of numerical values -
+My_Numbers_Dict = {Num:Num*2 for Num in [1,2,3,4,5,6]} 
+print(My_Numbers_Dict) #this will create a new dictionary that contains the numbers from the list [1,2,3,4,5,6] as keys and their corresponding values multiplied by 2. The output will be {1: 2, 2: 4, 3: 6, 4: 8, 5: 10, 6: 12}, which is a dictionary that contains the numbers from the original list as keys and their corresponding values multiplied by 2.
+
+My_Lucky_Numbers = {Num:Lucky for Num, Lucky in My_Numbers_Dict.items() if Num % 2 == 0} #this will create a new dictionary that contains only the even numbers from the My_Numbers_Dict dictionary, and their corresponding values multiplied by 2. The output will be {2: 4, 4: 8, 6: 12}, which is a dictionary that contains only the even numbers from the original dictionary, and their corresponding values multiplied by 2.
+print(My_Lucky_Numbers)
+
+#from a list of string values (using List Slicing, range() and len()) -
+My_Greetings = ['Hello', 'English', 'Hola', 'Spanish', 'Hallo', 'German', 'Namaste', 'Hindi']
+Say_Hello = {My_Greetings[i]:My_Greetings[i+1] for i in range(0, len(My_Greetings),2)}
+print(Say_Hello)
+
+#Extracting Duplicates from Raw data/list: 
+Raw_List = ['Andrea', 'Andrea', 'Joan', 'Jonathan', 'johnny', 'johnny', 'Silter', 'Silter', 'Mulder', 'Letty']
+
+#this returns the duplicate values from Raw_List as many number of 
+#times in that list itself:
+Duplicates = [Name for Name in Raw_List if Raw_List.count(Name) > 1]
+print(Duplicates)
+
+#But what if we want a List of only unique duplicate values 
+#from the Raw_List? i.e. if 'Andrea' appears 2 times in the Raw_List
+# we want our new list "Duplicates" to show it only once. 
+#In that case we can use the Set and list functions to obtain the 
+#duplicated values only once from the  Raw_List: 
+
+Duplicates = list(set([Name for Name in Raw_List if Raw_List.count(Name) > 1]))
+print(Duplicates) 
 
 
 
