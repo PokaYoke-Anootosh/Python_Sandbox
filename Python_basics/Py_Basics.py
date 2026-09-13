@@ -1827,5 +1827,27 @@ print(Duplicates)
 Duplicates = list(set([Name for Name in Raw_List if Raw_List.count(Name) > 1]))
 print(Duplicates) 
 
+#Importing Modules:
+#Python has a large standard library of built-in modules that you can import and use in your programs. 
+#You can also create your own modules and import them into your programs. 
+
+#This Impoorts the module Hello_World.py from the same folder 
+# Python_basics (or directory) as this file. 
+import Hello_World
+
+#**Note: import cannot import a module or .py file that is sitting in
+# another Folder/Directory by default. 
+
+# Now that we have imported the module we can start calling and 
+# using any functions too that sits inside that module.
+# Lets call teh greet_user() function that sits in the Hello_World.py 
+# module and pass the argument 'Elon the Alien' to it: 
+print(Hello_World.greet_user('Elon the Alien'))
+
+
+
+
+
+
 
 

@@ -46,6 +46,10 @@ def Take_Action():
 print(f'The value of the Global Variable Action is: {Action}')
 print(f'The value of the Local Variable Action is: {Take_Action()}') 
 
+#Importing Modules:
+#Python has a large standard library of built-in modules that you can import and use in your programs. 
+#You can also create your own modules and import them into your programs. 
+
 
 
 
