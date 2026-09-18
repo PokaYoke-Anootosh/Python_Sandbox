@@ -52,4 +52,11 @@ def SUM_IF_EVEN(num1, num2):
 SumNum = SUM_IF_EVEN(4,6)
 print(SumNum)
 
+def SUM_IF_ODD(num1, num2):
+    if num1 % 2 !=0 and num2 % 2 !=0:
+        return num1 + num2
+    else:
+        print('One of the numbers is not odd!')
 
+SumNum_Odd = SUM_IF_ODD(3,5)
+print(SumNum_Odd)

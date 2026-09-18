@@ -1842,7 +1842,25 @@ import Hello_World
 # using any functions too that sits inside that module.
 # Lets call teh greet_user() function that sits in the Hello_World.py 
 # module and pass the argument 'Elon the Alien' to it: 
-print(Hello_World.greet_user('Elon the Alien'))
+print(Hello_World.greet_user('Elon the Alien')) 
+
+#Importing the  SUM_IF_EVEN from the Basic_GUL.py package/folder: 
+import Sandbox_1.Basic_GUI
+print(Sandbox_1.Basic_GUI.SUM_IF_EVEN(4,6))
+
+#OR using from-Import syntax: 
+from Sandbox_1.Basic_GUI import SUM_IF_EVEN
+print(SUM_IF_EVEN(4,6))
+
+#Importing multiple functions using from-import syntax: 
+from Sandbox_1.Basic_GUI import SUM_IF_EVEN, SUM_IF_ODD
+print(SUM_IF_EVEN(4,6))
+print(SUM_IF_ODD(3,5))
+
+
+
+
+
 
 
 
